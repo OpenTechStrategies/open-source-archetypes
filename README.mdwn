@@ -1,0 +1,77 @@
+Open source is a broad term that encompasses many different types of
+projects.  There is a wide range of open source approaches, and
+sometimes it helps to think through how your open source approach
+matches your goals, resources, and environment.  In many places we
+look, we see open source used as a catch-all term to refer to every
+project.  We don't have a common vocabulary to discuss open source in
+ways that take account of important differences.
+
+This report is a first step in addressing that problem.  OTS prepared
+it for Mozilla in the first half of 2018.  The report catalogs a
+number of open source archetypes we observe around the community.  OTS
+and Mozilla have found these archetypes to be a useful resource when
+crafting strategy, weighing tradeoffs, and committing support to open
+source endeavors.
+
+We hope it is useful to you as you design open source initiatives,
+weigh tradeoffs in strategy, and pick metrics to track success.  The
+archetypes we list are useful comparison points for anybody trying to
+maximize the benefits of their open source investment.
+
+# Caveat Lector
+
+This report is version 1, and it is surely incomplete.  The borders
+between the archetypes are fuzzy, and we shouldn't expect real-world
+projects to all neatly line up with these categories.  It is not a
+taxonomy.  Many projects fit multiple archetypes at once, and we had
+heated discussions on how to characterize some projects.  Good
+projects tend to change archetypes over their lifecycle.
+
+All of this is to say that we regard this document as a good start
+with more work to be done.
+
+# Contributing
+
+This report is version 1.  We have collected notes for an update, and
+welcome input, suggestions, editing, and textual contribution.  We
+know you're going to read this and have views worth adding to the
+conversation.  Please share them with us.  Together with you, we will
+do the ongong work of refining archetypes and filling gaps.
+
+There are two main ways to contribute to the text in this
+report. First, there are the usual mechanisms available through
+GitHub. Please file issues, issue pull requests, and review patches.
+All the same distributed collaboration mechanisms we use to build
+software can be used to edit a text document.  The second way to
+contribute is to send us feedback and suggestions via email to
+archetypes@opentechstrategies.com.  That email will influence our
+thinking but won't make it into the public discussion unless it
+results in us filing a ticket or making a change to the document on
+GitHub.
+
+Beyond that, this raw material would be more useful in the form of
+analytical tools.  That's on our roadmap, and we intend to provide
+more guidance on how product managers and decision-makers can use the
+archetypes to provide useful hints on licensing, collaboration models,
+resource allocation and more.
+
+# Dependencies
+
+This report is a LaTeX document.  It uses on a LaTeX class that you
+can get from https://github.com/OpenTechStrategies/otsltx.
+
+That repo also has a convenient Makefile, but you should be able to
+build the doc without it.
+
+# License, Copyright, Maintenance
+
+This document was originally authored by Karl Fogel, James Vasile, and
+Cecilia Donnelly of Open Tech Strategies as a work-for-hire under
+contract to Mozilla Corporation.  It is Copyright 2018 Mozilla
+Foundation and Open Tech Strategies and licensed to you under
+CC-By-SA.  To provide attribution, please link to this repository.
+
+Open Tech Strategies performs ongoing maintenance of this document and
+repository, with the support and participation of Mozilla.  Mozilla
+reviewed the 1.0 external draft, but does not exercise editorial
+control over this repository.
