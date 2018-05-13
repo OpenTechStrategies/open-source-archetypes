@@ -1,0 +1,260 @@
+\documentclass[12pt]{otsreport}
+
+% Uncomment the following line to disable hyphenation.
+%\usepackage[none]{hyphenat}
+
+\usepackage{ots} 
+\usepackage{amsmath}
+\usepackage{setspace}  % to control TOC spacing
+
+% This package gives us \RaggedRight to use in place of \raggedright.
+% Doing so solves the problem of our big Archetype comparison chart
+% (which is implement as a longtable) not being ragged-right in cells.
+% For more details, see section 2.1 on page 351 of Klaus Höppner's
+% "Typesetting tables with LaTeX" at
+% https://www.tug.org/TUGboat/tb28-3/tb90hoeppner.pdf.
+\usepackage{ragged2e}
+
+% For coloring individual cells in tables.
+\usepackage[table]{xcolor}
+% Define colors used in this document here.  latexcolor.com may help.
+\definecolor{tableheader}{rgb}{0.6, 0.73, 0.89}
+\definecolor{rowheaderleft}{rgb}{0.63, 0.79, 0.95}
+\definecolor{plainwhite}{rgb}{1, 1, 1}
+% Some good blue-y colors Karl found, FWIW:
+%
+%   Eton blue             #96C8A2       {0.59, 0.78, 0.64}
+%   Carolina blue         #99BADD       {0.6, 0.73, 0.89}
+%   Baby blue eyes        #A1CAF1       {0.63, 0.79, 0.95}
+%
+% Less sure about these green ones, but they might work together:
+% 
+%   Moss green            #ADDFAD       {0.68, 0.87, 0.68}
+%   Olivine               #9AB973       {0.6, 0.73, 0.45}
+%   Turquoise green       #A0D6B4       {0.63, 0.84, 0.71}
+
+% Without this, a multiline footnote has its first line (including the
+% footnote's identifying number) indented by quite a bit inside the
+% margin, but then subsequent lines start at the margin, which just
+% looks weird IMHO.  With this, the numbers start at the margin, and
+% all the lines of text line up with each other, indented slightly.
+% 
+% See https://www.ctan.org/pkg/footmisc?lang=en
+\usepackage[hang,flushmargin]{footmisc}
+
+\usepackage{ifxetex,ifluatex}
+\ifxetex
+  \usepackage{fontspec,xltxtra,xunicode}
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\else
+  \ifluatex
+    \usepackage{fontspec}
+    \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \else
+    \usepackage[utf8]{inputenc}
+  \fi
+\fi
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+% This TOC depth causes the table of contents to provide a high-level
+% overview of the document, instead of distracting the reader with
+% subsection titles and such.
+\setcounter{tocdepth}{1}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true, pdfborder={0 0 0}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt plus 2pt minus 1pt}
+\setcounter{secnumdepth}{0}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{changepage}
+
+\usepackage{hyperref}
+\usepackage{mdframed} % For an inset box of text
+
+% For logo and accompanying contact info.
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{color}
+\definecolor{dkgreen}{RGB}{50, 109, 72}
+\definecolor{dkergreen}{RGB}{0, 100, 0}
+\DeclareFixedFont{\viiisf}{OT1}{cmss}{m}{n}{8}
+\newcommand{\circlesep}{\raisebox{1.7em}{\hspace{1.8em}\includegraphics[clip, trim=0cm 11cm 19.3cm 11cm, scale=0.05]{otslogo.pdf}\hspace{1.8em}}}
+
+% Use these (instead of \section) to make a top-level section for
+% which numbering is on or off, respectively.  For most of the
+% sections, numbering should be on, but for a few it should be off.
+%
+% For appendices, use \appdxsection.  For Appendix sub and subsubs,
+% use appdxsubsection and appdxsubsubsection.
+\newcommand{\unnumberedsection}[1]{%
+  % \newpage
+  \setcounter{secnumdepth}{-1}\section{#1}}
+\newcommand{\numberedsection}[1]{%
+  % \newpage
+  \setcounter{secnumdepth}{3}\section{#1}}
+
+\newcommand{\appdxsection}[1]{%
+  % Save existing section format
+  \let\oldthesection\thesection
+
+  % Create a subsection line in the doc and establish the name of the
+  % section for label purposes, but don't put it in the TOC
+  \renewcommand{\thesection}{Appendix \Alph{section}}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+  \hypersetup{bookmarksdepth=0}
+  \section{#1}
+  \hypersetup{bookmarksdepth=4}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
+
+  % Manually make a line for the TOC without the "Appendix" bit in
+  \addcontentsline{toc}{section}{\hspace{0.2em}\thesection\hspace{0.5em}#1}
+  %\addcontentsline{toc}{subsubsection}{\parbox{0.45in}{\hfill\thesubsubsection}\hspace{1em}#1\Dotfill\hspace{0.35em}}
+
+  % Restore normal section format
+  \let\thesection\oldthesection
+}
+
+\newcommand{\appdxsubsection}[1]{%
+  % Save existing section format
+  \let\oldthesection\thesection
+
+  % Create a subsection line in the doc and establish the name of the
+  % section for label purposes, but don't put it in the TOC
+  \renewcommand{\thesection}{Appendix \Alph{section}}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+  \hypersetup{bookmarksdepth=0}
+  \subsection{#1}
+  \hypersetup{bookmarksdepth=4}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
+
+  % Manually make a line for the TOC without the "Appendix" bit in
+  \renewcommand{\thesection}{\Alph{section}}
+  \addcontentsline{toc}{subsection}{\thesubsection\hspace{0.5em}#1}
+
+  % Restore normal section format
+  \let\thesection\oldthesection
+}
+\newcommand{\appdxsubsubsection}[1]{%
+  % Save existing section format
+  \let\oldthesection\thesection
+
+  % Create a subsection line in the doc and establish the name of the
+  % section for label purposes, but don't put it in the TOC
+  \renewcommand{\thesection}{Appendix \Alph{section}}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+  \hypersetup{bookmarksdepth=0}
+  \subsubsection{#1}
+  \hypersetup{bookmarksdepth=4}
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
+
+  % Manually make a line for the TOC without the "Appendix" bit in
+  \renewcommand{\thesection}{\Alph{section}}
+  \addcontentsline{toc}{subsubsection}{\hspace{0.2em}\thesubsubsection\hspace{0.5em}#1}
+  %\addcontentsline{toc}{subsubsection}{\parbox{0.45in}{\hfill\thesubsubsection}\hspace{1em}#1\Dotfill\hspace{0.35em}}
+
+  % Restore normal section format
+  \let\thesection\oldthesection
+}
+
+% Use this to refer to a [sub[sub]]section from elsewhere, 
+% assuming you want to include both its number and its name.
+\newcommand{\fullref}[1]{%
+  \ref{#1}~``\nameref{#1}''}
+
+% Rename the table of contents label
+\renewcommand*\contentsname{\vspace{-1em}}
+
+\begin{document}
+
+\otsheader
+
+% Must happen after \otsheader so that the header displays correctly.
+\RaggedRight
+
+\begin{center}
+\LARGE{Open Source Archetypes: \\
+  A Framework For Purposeful Open Source}
+
+\vspace{.5em}
+
+\normalsize{3 May 2018}
+\end{center}
+
+% The grouping with the \addtocontents and \addvspace bits below are
+% to reduce the vertical spacing in the TOC.  More information here:
+% https://tex.stackexchange.com/questions/111243/lyx-reduce-spacing-in-toc
+\begingroup
+% \addtocontents{toc}{\protect\setstretch{0.80}}
+% \def\addvspace#1{}
+\tableofcontents
+\endgroup
+
+\newpage
+
+\unnumberedsection{Lorem ipsum dolor amet}\label{preface}
+
+Chillwave XOXO kombucha pitchfork tilde shaman, street art master cleanse. Kale chips ugh hella quinoa, flexitarian polaroid locavore fanny pack photo booth +1 kinfolk gentrify franzen. Blog knausgaard actually, kinfolk austin microdosing 3 wolf moon man braid hexagon poke cred. Hell of messenger bag fashion axe organic VHS beard iPhone retro.
+
+Woke pabst pickled waistcoat whatever retro franzen pinterest kickstarter flexitarian cloud bread. Food truck tbh enamel pin, 3 wolf moon pug hoodie cray prism messenger bag taiyaki woke tumblr cornhole gochujang neutra. Lomo la croix deep v kinfolk asymmetrical. Listicle aesthetic swag sartorial mustache fingerstache dreamcatcher cray offal. Taxidermy whatever swag wolf small batch, single-origin coffee subway tile. Enamel pin copper mug mustache normcore chartreuse crucifix hashtag sartorial post-ironic retro. Kale chips fixie keffiyeh cronut, etsy health goth locavore PBR\&B live-edge fam cardigan.
+
+Tumeric leggings next level kickstarter cornhole hoodie coloring book live-edge deep v gochujang iPhone chambray vinyl. Williamsburg artisan listicle man bun vaporware pickled. Banjo iceland vice try-hard health goth thundercats helvetica next level. Next level woke scenester live-edge cronut slow-carb direct trade put a bird on it.
+
+Try-hard taiyaki scenester enamel pin neutra migas, blue bottle taxidermy meggings health goth stumptown salvia ethical. Adaptogen kinfolk godard, blue bottle fam chartreuse echo park iceland gentrify direct trade. Paleo prism raw denim venmo, migas schlitz irony chia offal austin cred. 90's thundercats next level raclette paleo. 8-bit migas everyday carry, cred roof party seitan squid. Vaporware tbh polaroid slow-carb gastropub.
+
+Street art photo booth everyday carry truffaut freegan chicharrones,
+ennui farm-to-table blog lyft. Skateboard helvetica palo santo, marfa
+gentrify man bun neutra shaman actually PBR\&B mlkshk. Fanny pack
+unicorn fingerstache shabby chic. Typewriter bitters cornhole glossier
+wayfarers chartreuse celiac semiotics DIY freegan tousled affogato
+interest.
+
+\newpage
+
+\unnumberedsection{Introduction}\label{introduction}
+
+Helvetica kickstarter forage, palo santo la croix pitchfork etsy. Put a bird on it tbh sriracha, stumptown retro selvage prism enamel pin. Fanny pack tote bag vegan humblebrag. Selvage hexagon hot chicken, lumbersexual four loko kale chips venmo kogi. Blue bottle waistcoat small batch tousled scenester prism brunch enamel pin kombucha cred kinfolk freegan pug bitters pour-over.
+
+Tbh subway tile four dollar toast distillery kogi street art, cloud bread franzen leggings. Yuccie shaman you probably haven't heard of them XOXO occupy, swag cardigan air plant vexillologist woke fashion axe cronut bicycle rights actually. Fixie neutra kombucha gentrify, kinfolk swag craft beer chillwave next level mumblecore ethical letterpress try-hard. Tattooed polaroid direct trade intelligentsia pabst truffaut pinterest iceland distillery umami biodiesel hammock.
+
+Drinking vinegar poke ennui, master cleanse thundercats butcher offal. Pickled vexillologist paleo heirloom live-edge bushwick, knausgaard vegan hell of subway tile kickstarter ethical lo-fi mumblecore. Man bun church-key edison bulb hot chicken mumblecore banjo meh lyft blog fam freegan bespoke, mixtape yuccie. Everyday carry butcher chambray, paleo asymmetrical bitters post-ironic leggings craft beer four dollar toast pitchfork ethical poutine williamsburg. Aesthetic crucifix shaman edison bulb pickled trust fund, live-edge lo-fi flexitarian slow-carb cloud bread meggings tote bag. Vaporware locavore yuccie vape, forage narwhal edison bulb gentrify trust fund lo-fi tbh hammock pug messenger bag enamel pin.
+
+Aesthetic mustache DIY street art microdosing. Green juice vice hashtag succulents crucifix live-edge skateboard literally cardigan chillwave. Bespoke man braid poutine crucifix +1 cray next level mixtape heirloom vaporware butcher ramps cronut. Kickstarter butcher readymade, narwhal iceland intelligentsia leggings direct trade roof party man bun plaid echo park pok pok sriracha chambray. Shoreditch +1 banh mi taxidermy man bun banjo. Bespoke you probably haven't heard of them truffaut lomo glossier keffiyeh bushwick jean shorts flannel tumblr. Af normcore asymmetrical chicharrones master cleanse fam.
+
+Plaid vaporware salvia wolf art party waistcoat glossier pop-up. Viral
+pork belly kickstarter trust fund live-edge cray bespoke adaptogen
+artisan 3 wolf moon. Tousled whatever austin, dreamcatcher truffaut
+brunch paleo forage pickled. Retro bitters shaman pinterest readymade
+beard. Green juice vexillologist flannel portland dreamcatcher. Marfa
+\otsurl{https://fsf.org} vexillologist butcher kogi, organic viral air plant kitsch dreamcatcher master cleanse ethical.
+
+
+\appdxsection{Semiotics twee chia iPhone bushwick}\label{appdx-openness}
+
+Lorem ipsum dolor amet fingerstache keffiyeh synth tousled woke DIY yr. Bespoke meh pabst, blog salvia everyday carry offal before they sold out hot chicken succulents plaid synth freegan man bun iPhone. Humblebrag dreamcatcher bespoke 90's bicycle rights swag mustache vegan. Dreamcatcher cray chartreuse, occupy yr humblebrag heirloom.
+
+Cardigan fanny pack irony pop-up gentrify stumptown kogi echo park. 90's +1 air plant kickstarter offal twee health goth. Wolf fixie sartorial, you probably haven't heard of them brunch hoodie helvetica cardigan mustache aesthetic dreamcatcher air plant VHS. Lyft wayfarers cold-pressed, salvia chartreuse kale chips biodiesel. Fingerstache forage deep v offal, biodiesel squid ennui enamel pin iceland.
+
+Etsy selvage mumblecore, ramps ethical sartorial locavore vexillologist health goth post-ironic coloring book thundercats chartreuse prism. Letterpress umami pug, fashion axe seitan austin pok pok man bun blog coloring book enamel pin flexitarian 90's. Typewriter mustache affogato, drinking vinegar actually blog meditation roof party. Bushwick hammock YOLO listicle biodiesel raclette photo booth selvage yr venmo poke meditation. Normcore food truck direct trade asymmetrical flexitarian blue bottle, knausgaard hammock la croix. Cardigan tacos shoreditch fanny pack pinterest bitters 3 wolf moon vinyl squid. Hashtag messenger bag retro, vape tilde tumeric vice bushwick trust fund meh flannel vinyl roof party.
+
+Subway tile leggings prism, 3 wolf moon poutine helvetica direct trade unicorn edison bulb food truck blog vinyl flexitarian. Poke PBR\&B yuccie chia, bespoke yr seitan four dollar toast vice. +1 pug DIY, chambray vape scenester actually. Try-hard coloring book austin asymmetrical, adaptogen etsy next level affogato.
+
+Fashion axe lumbersexual franzen prism actually vinyl kombucha cloud bread lyft four loko keffiyeh tofu. Air plant blog gluten-free, vaporware lo-fi chia migas gochujang beard. Shoreditch kinfolk blue bottle, banjo 8-bit try-hard schlitz. Post-ironic tote bag pinterest, affogato asymmetrical jianbing disrupt woke bushwick.
+
+\end{document}
