@@ -31,7 +31,6 @@ endif
 
 # If we didn't find the OTS Latex stuff, grab it from GitHub
 ifndef OTSLTXDIR
-#$(error Cannot find OTSLTX materials.  Please install OTSLTX, set OTSLTXDIR, and/or put OTSLTX in this directory.)
 $(shell git submodule add https://github.com/OpenTechStrategies/otsltx)
 OTSLTXDIR=otsltx
 endif
