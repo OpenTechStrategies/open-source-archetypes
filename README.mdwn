@@ -55,7 +55,7 @@ more guidance on how product managers and decision-makers can use the
 archetypes to provide useful hints on licensing, collaboration models,
 resource allocation and more.
 
-# Dependencies
+# Building and Dependencies
 
 Building the doc requires both pdflatex and latexmk.
 
@@ -70,8 +70,15 @@ with `git submodule add https://github.com/OpenTechStrategies/otsltx`.
 If this is the only OTS document you're ever going to work on, that's
 probably your quickest, easiest path to satisfying this dependency.
 
-Please let us know if you have difficulty with this.  We are eager for
-feedback on this process so we can improve it.
+Linux and OS X should generally do the right thing with these
+materials.  We have not yet documented how to set this up on Windows
+because we haven't tried to do that setup.  If you're on Windows,
+please let us know how it goes and hjow we can improve these
+materials.
+
+No matter your operating system, please let us know if you have
+difficulty with this.  We are eager for feedback on this process so we
+can improve it.
 
 # License, Copyright, Maintenance
 
