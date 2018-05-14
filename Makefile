@@ -16,18 +16,19 @@ else
 # Otherwise maybe one's defined in the environment
 ifndef OTSLTXDIR
 ifneq ("$(wildcard $(OTSDIR)/forms/latex)","")
-OTSLTXDIR = "$(OTSDIR)/forms/latex"
+OTSLTXDIR = $(OTSDIR)/forms/latex
 else
 ifneq ("$(wildcard ~/OTS/forms/latex)","")
-OTSLTXDIR = "~/OTS/forms/latex"
+OTSLTXDIR = ~/OTS/forms/latex
 else
 ifneq ("$(wildcard /usr/local/src/otsltx)","")
-OTSLTXDIR = "/usr/local/src/otsltx"
+OTSLTXDIR = /usr/local/src/otsltx
 endif
 endif
 endif
 endif
 endif
+
 
 # If we didn't find the OTS Latex stuff, grab it from GitHub
 ifndef OTSLTXDIR
