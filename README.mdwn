@@ -92,7 +92,7 @@ CC-BY-SA.  To provide attribution, please link to this repository.
 
 Open Tech Strategies performs ongoing maintenance of this document and
 repository, with the support and participation of Mozilla.  Mozilla
-reviewed the 1.0 external draft, but does not exercise editorial
+reviewed the 1.0 draft, but does not exercise editorial
 control over this repository.
 
 Mozilla publishes a graphically enhanced
