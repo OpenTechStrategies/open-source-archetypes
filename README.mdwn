@@ -2,9 +2,11 @@ Open source is a broad term that encompasses many different types of
 projects.  There is a wide range of open source approaches, and
 sometimes it helps to think through how your open source approach
 matches your goals, resources, and environment.  In many places we
-look, we see open source used as a catch-all term to refer to every
-project.  We don't have a common vocabulary to discuss open source in
-ways that take account of important differences.
+look, we see "open source" used as a catch-all term to refer to very
+different projects that share only the fact that their source code is
+distributed under an open source license.  We don't have a common
+vocabulary to discuss open source in ways that take account of
+important differences.
 
 This report is a first step in addressing that problem.  OTS prepared
 it for Mozilla in the first half of 2018.  The report catalogs a
@@ -86,7 +88,7 @@ This document was originally authored by Karl Fogel, James Vasile, and
 Cecilia Donnelly of Open Tech Strategies as a work-for-hire under
 contract to Mozilla Corporation.  It is Copyright 2018 Mozilla
 Foundation and Open Tech Strategies and licensed to you under
-CC-By-SA.  To provide attribution, please link to this repository.
+CC-BY-SA.  To provide attribution, please link to this repository.
 
 Open Tech Strategies performs ongoing maintenance of this document and
 repository, with the support and participation of Mozilla.  Mozilla
