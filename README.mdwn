@@ -75,7 +75,7 @@ probably your quickest, easiest path to satisfying this dependency.
 Linux and OS X should generally do the right thing with these
 materials.  We have not yet documented how to set this up on Windows
 because we haven't tried to do that setup.  If you're on Windows,
-please let us know how it goes and hjow we can improve these
+please let us know how it goes and how we can improve these
 materials.
 
 No matter your operating system, please let us know if you have
