@@ -88,7 +88,7 @@ This document was originally authored by Karl Fogel, James Vasile, and
 Cecilia Donnelly of Open Tech Strategies as a work-for-hire under
 contract to Mozilla Corporation.  It is Copyright 2018 Mozilla
 Foundation and Open Tech Strategies and licensed to you under
-CC-BY-SA.  To provide attribution, please link to this repository.
+[CC-BY-SA](LICENSE).  To provide attribution, please link to this repository.
 
 Open Tech Strategies performs ongoing maintenance of this document and
 repository, with the support and participation of Mozilla.  Mozilla
