@@ -1,28 +1,28 @@
 # This is a document-specific Makefile.  Matters that are specific to
 # this doc can be put here.  More general LaTeX building targets can
-# go in OTSLTXDIR/Makefile, which this one calls.
+# go in OTS_DOCTOOLS_DIR/Makefile, which this one calls.
 
 # By default, we build all .ltx files in this dir
 SOURCE=$(wildcard *.ltx)
 TARGETS=$(SOURCE:.ltx=.pdf)
 
-### Try to find otsltx directory.  We look in the current dir, then
-### for a $OTSLTXDIR environment variable, then $OTSDIR/forms/latex,
-### then ~/OTS/forms/latex, then /usr/local/src/otsltx
-# If there's a local otsltx dir, use it
-ifneq ("$(wildcard otsltx)","")
-OTSLTXDIR = otsltx
+### Try to find ots-doctools directory.  We look in the current dir, then
+### for a $OTS_DOCTOOLS_DIR environment variable, then $OTSDIR/forms/latex,
+### then ~/OTS/forms/latex, then /usr/local/src/ots-doctools
+# If there's a local ots-doctools dir, use it
+ifneq ("$(wildcard ots-doctools)","")
+OTS_DOCTOOLS_DIR = ots-doctools
 else
 # Otherwise maybe one's defined in the environment
-ifndef OTSLTXDIR
+ifndef OTS_DOCTOOLS_DIR
 ifneq ("$(wildcard $(OTSDIR)/forms/latex)","")
-OTSLTXDIR = $(OTSDIR)/forms/latex
+OTS_DOCTOOLS_DIR = $(OTSDIR)/forms/latex
 else
 ifneq ("$(wildcard ~/OTS/forms/latex)","")
-OTSLTXDIR = ~/OTS/forms/latex
+OTS_DOCTOOLS_DIR = ~/OTS/forms/latex
 else
-ifneq ("$(wildcard /usr/local/src/otsltx)","")
-OTSLTXDIR = /usr/local/src/otsltx
+ifneq ("$(wildcard /usr/local/src/ots-doctools)","")
+OTS_DOCTOOLS_DIR = /usr/local/src/ots-doctools
 endif
 endif
 endif
@@ -31,9 +31,9 @@ endif
 
 
 # If we didn't find the OTS Latex stuff, grab it from GitHub
-ifndef OTSLTXDIR
-$(shell git submodule add https://github.com/OpenTechStrategies/otsltx)
-OTSLTXDIR=otsltx
+ifndef OTS_DOCTOOLS_DIR
+$(shell git submodule add https://github.com/OpenTechStrategies/ots-doctools)
+OTS_DOCTOOLS_DIR=ots-doctools
 endif
 
 all: DEPS ${TARGETS}
@@ -42,25 +42,25 @@ all: DEPS ${TARGETS}
 .PHONY: DEPS
 DEPS: otsreport.cls ots.sty otslogo.pdf
 
-otsreport.cls: $(OTSLTXDIR)/otsreport.cls
-	ln -s $(OTSLTXDIR)/otsreport.cls
+otsreport.cls: $(OTS_DOCTOOLS_DIR)/otsreport.cls
+	ln -s $(OTS_DOCTOOLS_DIR)/otsreport.cls
 
-ots.sty:  $(OTSLTXDIR)/ots.sty
-	ln -s $(OTSLTXDIR)/ots.sty
+ots.sty:  $(OTS_DOCTOOLS_DIR)/ots.sty
+	ln -s $(OTS_DOCTOOLS_DIR)/ots.sty
 
-otslogo.pdf:  $(OTSLTXDIR)/otslogo.pdf
-	ln -s $(OTSLTXDIR)/otslogo.pdf
+otslogo.pdf:  $(OTS_DOCTOOLS_DIR)/otslogo.pdf
+	ln -s $(OTS_DOCTOOLS_DIR)/otslogo.pdf
 
-# Use the OTSLTX Makefile to turn .ltx into .pdf files
+# Use the OTS-DOCTOOLS Makefile to turn .ltx into .pdf files
 %.pdf: %.ltx
-	$(MAKE) -f ${OTSLTXDIR}/Makefile $@
+	$(MAKE) -f ${OTS_DOCTOOLS_DIR}/Makefile $@
 
 clean:
 	rm -f otsreport.cls ots.sty otslogo.pdf
 	@# Delete PDFs that we do not care enough about to check into the repo
 	@$(foreach x,${TARGETS}, git status -s ${x} | grep -q "M ${x}" || rm -f ${x};)
-	$(MAKE) -f ${OTSLTXDIR}/Makefile clean
-	@# Remove otsltx submodule
-	git submodule deinit -f otsltx
-	rm -rf .git/modules/otsltx
-	git rm -f otsltx
+	$(MAKE) -f ${OTS_DOCTOOLS_DIR}/Makefile clean
+	@# Remove ots-doctools submodule
+	git submodule deinit -f ots-doctools
+	rm -rf .git/modules/ots-doctools
+	git rm -f ots-doctools
