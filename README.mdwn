@@ -59,20 +59,25 @@ resource allocation and more.
 
 # Building and Dependencies
 
-Building the doc requires both pdflatex and latexmk.
+Building the doc requires `pdflatex` and `latexmk` (LaTeX binary
+dependencies), and also `setspace.sty` and `comment.sty` files.
 
-Other than those LaTeX binary dependencies, running `make` should
+On Ubuntu (18.10) you can get the `setspace.sty` file by installing
+the `texlive-latex-recommended` package, and the `comment.sty` file by
+installing the `texlive-latex-extra` package.
+
+Other than those LaTeX dependencies, running `make` should
 handle the OTS-specific LaTeX source dependencies properly.
 
-This report is a LaTeX document.  It uses on a LaTeX class that you
+This report is a LaTeX document.  It uses a LaTeX class that you
 can get from https://github.com/OpenTechStrategies/ots-doctools.  If you
-don't already have that installed, and running make fails to magically
+don't already have that installed, and running `make` fails to magically
 install it for you, you can add it as a submodule to this git install
 with `git submodule add https://github.com/OpenTechStrategies/ots-doctools`.
 If this is the only OTS document you're ever going to work on, that's
 probably your quickest, easiest path to satisfying this dependency.
 
-Linux and OS X should generally do the right thing with these
+Linux and macOS should generally do the right thing with these
 materials.  We have not yet documented how to set this up on Windows
 because we haven't tried to do that setup.  If you're on Windows,
 please let us know how it goes and how we can improve these
