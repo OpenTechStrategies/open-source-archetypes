@@ -62,9 +62,9 @@ resource allocation and more.
 Building the doc requires the following LaTeX dependencies: `pdflatex`
 and `latexmk`, and the `setspace.sty` and `comment.sty` files.
 
-On Ubuntu (18.10) you can get the `setspace.sty` file by installing
-the `texlive-latex-recommended` package, and the `comment.sty` file by
-installing the `texlive-latex-extra` package.
+On Debian and Ubuntu GNU/Linux you can get the `setspace.sty` file by
+installing the `texlive-latex-recommended` package, and the `comment.sty`
+file by installing the `texlive-latex-extra` package.
 
 Other than those LaTeX dependencies, running `make` should
 handle the OTS-specific LaTeX source dependencies properly.
