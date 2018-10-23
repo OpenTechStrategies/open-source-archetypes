@@ -1,4 +1,11 @@
 otsreport.cls
 ots.sty
 otslogo.pdf
-.gitmodules
+open-source-archetypes.aux
+open-source-archetypes.fdb_latexmk
+open-source-archetypes.fls
+open-source-archetypes.log
+open-source-archetypes.out
+open-source-archetypes.pdf
+open-source-archetypes.toc
+ots-doctools

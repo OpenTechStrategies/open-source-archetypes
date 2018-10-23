@@ -72,8 +72,8 @@ handle the OTS-specific LaTeX source dependencies properly.
 This report is a LaTeX document.  It uses a LaTeX class that you
 can get from https://github.com/OpenTechStrategies/ots-doctools.  If you
 don't already have that installed, and running `make` fails to magically
-install it for you, you can add it as a submodule to this git install
-with `git submodule add https://github.com/OpenTechStrategies/ots-doctools`.
+install it for you, you can add it here with
+`git clone https://github.com/OpenTechStrategies/ots-doctools`.
 If this is the only OTS document you're ever going to work on, that's
 probably your quickest, easiest path to satisfying this dependency.
 
