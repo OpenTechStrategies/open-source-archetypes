@@ -1803,19 +1803,22 @@ archetype.
 
 \unnumberedsection{Signs of Health: Metrics for Archetypes}\label{archetype-metrics}
 
-This section discusses various measurements of project activity and
-growth.  For each archetype, certain measurements warrant emphasis or
-special treatment, and we will discuss those where applicable.
-Because the archetypes have so much in common with each other, a given
-metric usually applies to more than one archetype, so we have chosen
-to treat metrics as their own unified topic here, rather than viewing
-them through the lenses of the archetypes.
+\begin{center}\textit{Note: this section is in progress; expect it to change rapidly.}\end{center}
 
-The goal of metrics is not primarily to \emph{identify} the archetype
---- an archetype is as much a goal one sets as a reality one discovers
---- but to tell if the project is succeeding on its own terms, and
-perhaps secondarily to get advance notice of forces that may cause the
-project to evolve from one archetype to another.
+This section discusses how to measure various aspects of project
+activity and project growth, and how those measurements should be
+expected to differ by the type of project.  Because the archetypes
+have so much in common with each other, and a given metric usually
+applies to multiple archetypes, we treat metrics as their own unified
+topic here rather than organizing them by archetype.  But for each
+archetype, certain measurements warrant emphasis or special treatment,
+and we will discuss those where applicable.
+
+The goal of these metrics is not primarily to \emph{identify} the
+archetype --- an archetype is as much a goal one sets as a reality one
+discovers --- but to tell if the project is succeeding on its own
+terms, and perhaps secondarily to get advance notice of forces that
+may cause the project to evolve from one archetype to another.
 
 (TBD: Connect with \fullref{evolution}: if you're expecting certain
 metrics, and you see something slightly different from that, it could
@@ -1823,36 +1826,139 @@ indicate that the project is transitioning to (or possibly from) some
 other archetype.  This might be desirable or might not be, but either
 way the metrics can offer an early sign it's happening.)
 
+These measurements are currently in no particular order:
+
 \begin{itemize}
+
+  \item Ratio of one-off inquirers to repeat inquirers.
+
+    For Mass Market, expect very high.
+
+    For Wide Open, expect high.
+
+    Review the others, and gather some data to see if this ratio
+    differs as expected.  (Note: we could save negative-result
+    hypotheses and maybe include them in an appendix or a separate
+    document, instead of just removing them as though they were never
+    there.)
 
   \item Duration of organizational participation, and ``weight'' per
     org.  Duration might need to be measured relative to market cycles.
+
     (B2B)
 
   \item Ratio of large change requests to small / one-off CRs.
+
     (B2B)
 
   \item Ratio of organizationally-motivated changes to
     individually-motivated ones.
+
     (B2B)
 
   \item Existence of customized forks / vendor branches.
+
     (B2B)
 
   \item Frequency of appearance as topic of conference presentations, hackathons?
+
     (B2B)
 
   \item Ratio of lead-org contributors to external contributors?
-    (B2B, Multi-Vendor Infrastructure)
+
+    (B2B and Multi-Vendor Infrastructure, but note that one should
+    expect different ratios for those two different archetypes)
 
   \item Ubiquity of use within a defined industry area.
+
     (B2B)
 
   \item Packaging by OS distros; frequency of being offered as a
     pre-defined add-on by cloud vendors.
+
     (Multi-Vendor Infrastructure, maybe B2B)
 
-  \item ...(working here)...
+  \item Migration of functionality from core to plugins (this is a
+    special case of increasing modularization)
+
+    (Controlled Ecosystem)
+
+  \item Frequency with which a representative from the lead
+    organization (``Benevolent Dictator Organization'' / ``BDO'')
+    participates in discussion, especially with respect to discussions
+    that lead toward a decision.  Look at both ratio across all
+    discussions and ratio within each discussion thread.  By
+    ``discussions'' here, we include issue tracker threads.
+
+    For B2B, RStM, Upstream Dependency, and Trusted Vendor, this
+    frequency should be high.
+
+    For Controlled Ecosystem, same, but only w.r.t. core development,
+    not plugins.
+
+    For Multi-Vendor Infrastructure, if it's very high for one org,
+    that might be a sign that the project isn't as MVI as you thought.
+
+    For Wide Open and Mass Market, this metric is not particularly
+    relevant.  It could be high or it could be low, but it doesn't
+    necessarily tell you much either way.
+
+  \item Organizational diversity of responders.
+
+    In Multi-Vendor Infrastructure, again watch out for one org doing
+    most of the responding.  One use of these metrics is to be able to
+    tell a project -- perhaps a project that doesn't want to hear it
+    -- that although they are aiming for MVI, they're actually B2B or
+    something else.
+
+    In Trusted Vendor, B2B, RStM, Specialty Library, expect low.
+
+    In Wide Open, Mass Market, and Controlled Ecosystem, except high.
+
+    In Upstream Dependency, not sure this metric tells us much.
+
+  \item Engagement-level diversity of responders.
+
+    (tbd: compare with above)
+
+  \item Diversity of participants and contributors along several axes:
+
+    \begin{itemize}
+      \item Nationality (also, location --- remember they're not the same)
+      \item Native language
+      \item Profession
+      \item Gender
+      \item Ethnicity
+      \item ...tbd...
+    \end{itemize}
+
+    These may be of special interest to Wide Open and Mass Market
+    projects.  An argument --- or perhaps several distinct arguments,
+    depending on the archetype --- can be made for their importance to
+    other archetypes too.
+
+  \item Number of interactions from newcomer arrival to making a
+    contribution (and thence to becoming a committer, perhaps), for
+    those who do so.
+
+    In a sense, this measures ``speed'', but using interactions as the
+    clock tick instead of using calendar time.  We define an
+    interaction as participation in a distinct thread (including an
+    issue tracker thread).
+
+    The reason to measure by interaction instead of calendar time is
+    that the latter is likely to vary for reasons that are entirely
+    about the individual and not about the project.  For example,
+    someone who is busy and not focused on this project might only
+    interact a few times per year while still eventually getting to
+    the point of making a contribution, while someone who has more
+    time or more motivation might do the same much more quickly.
+
+    This \emph{may} be independent of archetype, and it may be the
+    first of a whole class of metrics that are useable as signs of
+    health but that don't necessarily correlate strongly with any
+    particular archetype.  If so, we should probably have a dedicated
+    subsection for such cross-archetype metrics.
 
 \end{itemize}
 
