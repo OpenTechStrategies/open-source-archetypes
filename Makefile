@@ -1,76 +1,33 @@
-# This is a document-specific Makefile.  Matters that are specific to
-# this doc can be put here.  More general LaTeX building targets can
-# go in OTS_DOCTOOLS_DIR/Makefile, which this one calls.
+#!/bin/sh
 
-# By default, we build all .ltx files in this dir
-SOURCE=$(wildcard *.ltx)
-TARGETS=$(SOURCE:.ltx=.pdf)
+### The upstream master version of this Makefile lives here:
+### 
+### https://github.com/OpenTechStrategies/ots-doctools/blob/master/ext-Makefile
+### 
+### A copy of this Makefile will often be included in a document
+### source tree, because for people who build documents, it's very
+### convenient to just run 'make' or 'make some_document_name.pdf' and
+### have the desired thing happen.  This Makefile then just forwards
+### all the action to the much more sophisticated Makefile found at
+### ${OTS_DOCTOOLS_DIR}/Makefile.  Therefore, please try not to make
+### changes here; instead, put any improvements in the other Makefile.
 
-### Try to find ots-doctools directory.  We look in the current dir,
-### then for a $OTS_DOCTOOLS_DIR environment variable, then for
-### /usr/local/src/ots-doctools/.
-ifneq ("$(wildcard ots-doctools)","")
-OTS_DOCTOOLS_DIR = ots-doctools
-else
-ifneq ("$(wildcard /usr/local/src/ots-doctools)","")
-OTS_DOCTOOLS_DIR = /usr/local/src/ots-doctools
-endif
-endif
+.PHONY: all check
 
+# The order of the rules below is important; change only with care.
 
-# If we didn't find the OTS Latex stuff, grab it from GitHub
-ifndef OTS_DOCTOOLS_DIR
-$(shell git clone https://github.com/OpenTechStrategies/ots-doctools)
-OTS_DOCTOOLS_DIR=ots-doctools
-endif
+all: check
+	@make -s -f ${OTS_DOCTOOLS_DIR}/Makefile
 
-all: DEPS ${TARGETS}
+%: check
+	@make -s -f ${OTS_DOCTOOLS_DIR}/Makefile $@
 
-# Handle OTS dependencies
-.PHONY: DEPS
-DEPS: otsreport.cls ots.sty otslogo.pdf
-
-otsreport.cls: $(OTS_DOCTOOLS_DIR)/otsreport.cls
-	ln -s $(OTS_DOCTOOLS_DIR)/otsreport.cls
-
-ots.sty:  $(OTS_DOCTOOLS_DIR)/ots.sty
-	ln -s $(OTS_DOCTOOLS_DIR)/ots.sty
-
-otslogo.pdf:  $(OTS_DOCTOOLS_DIR)/otslogo.pdf
-	ln -s $(OTS_DOCTOOLS_DIR)/otslogo.pdf
-
-# Use the OTS-DOCTOOLS Makefile to turn .ltx into .pdf files
-%.pdf: %.ltx
-	$(MAKE) -f ${OTS_DOCTOOLS_DIR}/Makefile $@
-
-clean:
-	rm -f otsreport.cls ots.sty otslogo.pdf
-	@# Delete PDFs that we do not care enough about to check into the repo
-	@$(foreach x,${TARGETS}, git status -s ${x} | grep -q "M ${x}" || rm -f ${x};)
-	$(MAKE) -f ${OTS_DOCTOOLS_DIR}/Makefile clean
-
-distclean: clean
-	@# Remove ots-doctools clone unless it has been modified.
-	@(ots_doctools_is_clean="maybe";                                      \
-          if [ -d ots-doctools ]; then                                        \
-            cd ots-doctools;                                                  \
-            if res=$$(git status --porcelain) && [ -z "$${res}" ]; then       \
-              ots_doctools_is_clean="yes";                                    \
-            else                                                              \
-              ots_doctools_is_clean="no";                                     \
-            fi;                                                               \
-            cd ..;                                                            \
-            if [ "$${ots_doctools_is_clean}" = "yes" ]; then                  \
-              rm -rf ots-doctools;                                            \
-            elif [ "$${ots_doctools_is_clean}" = "no" ]; then                 \
-              echo "WARNING: 'ots-doctools' modified, so leaving it" >&2;     \
-            elif [ "$${ots_doctools_is_clean}" = "maybe" ]; then              \
-              echo "ERROR: 'ots_doctools_is_clean' still undetermined" >&2;   \
-              exit 1;                                                         \
-            else                                                              \
-              echo "ERROR: Weird value for 'ots_doctools_is_clean'" >&2;      \
-              exit 1;                                                         \
-            fi;                                                               \
-          fi;                                                                 \
-        )
-
+check:
+	@if [ "${OTS_DOCTOOLS_DIR}X" = "X" ]; then                            \
+           echo "";                                                           \
+           echo "ERROR: Your OTS_DOCTOOLS_DIR env var is not set up yet.";    \
+           echo "       Please see this repository for instructions:";        \
+           echo "       https://github.com/OpenTechStrategies/ots-doctools."; \
+           echo "";                                                           \
+           exit 1;                                                            \
+        fi
