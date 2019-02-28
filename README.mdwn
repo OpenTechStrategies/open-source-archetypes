@@ -46,7 +46,7 @@ GitHub. Please file issues, issue pull requests, and review patches.
 All the same distributed collaboration mechanisms we use to build
 software can be used to edit a text document.  The second way to
 contribute is to send us feedback and suggestions via email to
-archetypes@opentechstrategies.com.  That email will influence our
+`archetypes {_AT_} opentechstrategies.com`.  That email will influence our
 thinking but won't make it into the public discussion unless it
 results in us filing a ticket or making a change to the document on
 GitHub.
@@ -59,33 +59,13 @@ resource allocation and more.
 
 # Building and Dependencies
 
-Building the doc requires the following LaTeX dependencies: `pdflatex`
-and `latexmk`, and the `setspace.sty` and `comment.sty` files.
-
-On Debian and Ubuntu GNU/Linux you can get the `setspace.sty` file by
-installing the `texlive-latex-recommended` package, and the `comment.sty`
-file by installing the `texlive-latex-extra` package.
-
-Other than those LaTeX dependencies, running `make` should
-handle the OTS-specific LaTeX source dependencies properly.
-
-This report is a LaTeX document.  It uses a LaTeX class that you
-can get from https://github.com/OpenTechStrategies/ots-doctools.  If you
-don't already have that installed, and running `make` fails to magically
-install it for you, you can add it here with
-`git clone https://github.com/OpenTechStrategies/ots-doctools`.
-If this is the only OTS document you're ever going to work on, that's
-probably your quickest, easiest path to satisfying this dependency.
-
-Linux and macOS should generally do the right thing with these
-materials.  We have not yet documented how to set this up on Windows
-because we haven't tried to do that setup.  If you're on Windows,
-please let us know how it goes and how we can improve these
+This report is a LaTeX document that uses the
+the [OTS Doctools](https://github.com/OpenTechStrategies/ots-doctools)
+system to build a PDF.  Once you have that infrastructure installed
+properly, running `make` should just work if you're on a Unix-like
+system.  We don't have experience building this on Windows, but if you
+do, please let us know how it goes and how we can improve these
 materials.
-
-No matter your operating system, please let us know if you have
-difficulty with this.  We are eager for feedback on this process so we
-can improve it.
 
 # License, Copyright, Publication, and Maintenance
 
