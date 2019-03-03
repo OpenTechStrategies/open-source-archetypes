@@ -194,7 +194,7 @@
 
 \vspace{.5em}
 
-\large{Version 2.0 }
+\large{Version 2.0-pre}
 
 \vspace{.5em}
 
@@ -216,7 +216,7 @@
 
 \newpage
 
-\unnumberedsection{Preface to the Public Edition}\label{preface}
+\unnumberedsection{Preface}\label{preface}
 
 This report was originally commissioned by the Mozilla Corporation for
 internal purposes.  Mozilla wanted a shared framework for discussing
@@ -238,14 +238,11 @@ left intact, on the theory that the analysis will be clearer if tuned
 to a specific (and fortunately well-known) organization rather than
 rewritten for a hypothetical general audience.
 
-We emphasize that this is very much a version 1.0.  There may be
-important archetypes we have not thought of, and for the archetypes we
-have identified there may be important properties not discussed here.
-We intend this report to be the beginning of a longer conversation
-about open source project archetypes.  Version 2.0 may or may not come
-from us, and may or may not even come from a single source; we think
-it will exist eventually, however, and we hope that when it does 1.0
-will be regarded as a worthy ancestor.
+We emphasize that this will always be a work in progress.  There may
+be important archetypes we have not thought of, and for the archetypes
+we have identified there may be important properties not discussed
+here.  We intend this report to be part of a larger conversation about
+open source project archetypes.
 
 \newpage
 
@@ -310,7 +307,7 @@ diversity of products and communities Mozilla works with.  Indeed, the
 Mozilla Way might be a willingness to explore many approaches to open
 source.
 
-\unnumberedsection{How to Use This Document}
+\numberedsection{How to Use This Document}
 
 The archetypes presented here (categorized in section
 \fullref{archetypes}) are not business strategies in themselves;
@@ -363,7 +360,7 @@ archetype.  After that, governance, licensing, process, and infrastructure decis
 then be made in light of that archetype, with some adjustments for the
 project's specific circumstances.
 
-\unnumberedsection{Benefits of Open Source}\label{benefits-of-open-source}
+\numberedsection{Benefits of Open Source}\label{benefits-of-open-source}
 
 In order to decide which particular benefits of open source to
 optimize for, it helps to survey the reasons a project is open source
@@ -390,7 +387,7 @@ Open source can be used to:
     over building a robust contributor ecosystem, at least initially.
     Licensing that is compatible with being used in proprietary
     systems may also be important, which would imply a non-copyleft
-    license (see \fullref{licensing-basics}).
+    license (see \fullref{appdx-licensing-basics}).
 
   \item \emph{Improve product quality.}
 
@@ -589,7 +586,7 @@ Open source can be used to:
 % Start the main section on its own page
 \newpage
 
-\unnumberedsection{Open Source Project Archetypes}\label{archetypes}
+\numberedsection{Open Source Project Archetypes}\label{archetypes}
 
 % Various points gleaned from trawling the interview notes (many of
 % these are items marked with the string "IMPORTANT" in Karl's notes,
@@ -1386,57 +1383,9 @@ toward it.
 \item {\bf Typical governance}: None.
 \end{itemize}
 
-\subsection{Evolution From One Archetype To Another}\label{evolution}
-
-Projects can change from one archetype to another, and often do.  It
-may be a deliberate and guided transformation, or it may be a gradual
-and incremental evolution that is not driven by any one participant.
-
-An example of a deliberate transition is Firefox, which went from
-Rocket Ship To Mars (or something close to it) to a mode much closer
-today to Mass Market.  An example of a less centrally-driven and more
-incremental transition is the WordPress open source project, which has
-been moving gradually from something like Trusted Vendor to something
-more like Controlled Ecosystem over a long period of time.
-WordPress's transition cannot be said to be purely natural, as it has
-occurred with the acquiescence and probably the encouragement of
-WordPress's primary commercial backer, Automattic, Inc --- and this is
-probably the common case: with the exception of genuine hard forks, it
-is rare for an archetype transition to occur entirely against the
-wishes of the most invested community members, but that does not mean
-that every such transition is necessarily chosen or driven by those
-members either.
-
-In general, transformations from Rocket Ship To Mars to some other
-archetype are among the most common, because they reflect a natural
-progression: from a small, focused, and unified core team working on
-something new, to a position where more people are involved and have
-broadening influence in the project.  If those new arrivals
-are mostly developers whose motives are immediate rather than
-strategic, that transformation might be toward Specialty Library.  If
-they are developers using the code as part of other programs, it might
-be toward Trusted Vendor or Upstream Dependency.  If they are plugin
-developers and API consumers, it might be toward Controlled Ecosystem.
-If they are organizations or organizationally-motivated developers,
-B2B or Multi-Vendor Infrastructure might be likely places to end up.
-If they are users, or a combination of users and developers, that
-might point the way toward Mass Market or Wide Open.
-
-Rocket Ship To Mars is not the only starting point for archetype
-transitions.  A project might move from B2B to Upstream Dependency as
-it becomes commoditized, for example, perhaps through competition or
-perhaps just through rapid adoption.  We will not attempt here to map
-out the full combinatoric range of possible archetype transitions.
-Having such a map would not be very useful anyway.  What is useful
-instead is to be always alert to the possibility of transformation,
-and to ask, at strategic points in a project's life cycle, whether a
-purposeful transformation might be called for, and whether there might
-be bottom-up pressure pushing the project toward a particular new
-archetype.
-
 \newpage
 
-\unnumberedsection{Quick-Reference Comparison Of All Archetypes}\label{quick-ref}
+\numberedsection{Quick-Reference Comparison Of All Archetypes}\label{quick-ref}
 
 % We eventually decided not to use these two figures, and their
 % placement in the page was wonky anyway.  But we've left them here
@@ -1801,7 +1750,71 @@ archetype.
 \addtolength{\textwidth}{-1.8cm}
 \addtolength{\hoffset}{1.8cm}
 
-\unnumberedsection{Signs of Health: Metrics for Archetypes}\label{archetype-metrics}
+\numberedsection{Contributors and Archetypes: Setting Expectations}\label{contributor-expectations}
+
+TBD, WIP:
+
+This section will suggest contribution policies for certain
+archetypes.  Because it's not a one-to-one
+policy$\leftrightarrow$archetype mapping, this is its own section,
+rather than being a regular subsection within each archetype.
+
+Answer questions like:
+
+\begin{itemize}
+  \item I am a new contributor. How much say should I expect to have
+    in this project, if I start contributing patches?
+  \item I am part of the maintaining team. How much time should I
+    expect to spend mentoring third party contributors?
+  \item What's the typical onboarding path? How far can a third party
+    contributor go?
+\end{itemize}
+
+This section will also provide some template language, in Markdown
+format, to describe expectations with a potential contributor as the
+intended audience.  Those templates will refer to archetypes where
+it's useful to do so, but will not assume that the reader is familiar
+with archetypes.  For example:
+
+\begin{verbatim}
+## Contribution Expectations
+
+ This project is currently focused on high-velocity development toward
+ a very specific goal: <summarize goal in one sentence here>.  We
+ welcome patches with bug fixes, and we're happy to answer questions
+ if you've already put in some effort to find the answer yourself, but
+ we're unlikely to consider new feature contributions unless there's a
+ strong argument that the feature is actually in line with our stated
+ goals.  If you're not sure, please feel free to ask.
+
+ Our technical scope and project governance may open up later, of
+ course, especially after we release version 1.0.  For now, though, we
+ would characterize this project as being an example of the "Rocket
+ Ship to Mars" archetype (see TBD URL for details about RStM and other
+ open source archetypes).
+\end{verbatim}
+
+\begin{em}
+
+TBD (WIP thoughts from Karl):
+
+Rather than provide one template per archetype -- which I think might
+tempt people to over-automate the process instead of thinking it
+through and making conscious choices -- we'll provide a set of example
+templates that express expectations to contributors and make clear
+what the project expects its investment to be. Those templates will
+refer to the archetypes as a concept and in some cases refer to
+specific archetypes.
+
+Off the top of my head, it's easy to think of similar blurbs for B2B,
+MVI, WO, and MM.  For CE, SL, TV, and UD, there are implications for
+contributor expectations, but it's less clear that naming the
+archetype will be useful to the contributor.  Best way is just to try
+it and see, probably.
+
+\end{em}
+
+\numberedsection{Signs of Health: Metrics and Archetypes}\label{metrics-archetypes}
 
 \begin{center}\textit{Note: this section is in progress; expect it to change rapidly.}\end{center}
 
@@ -1820,7 +1833,7 @@ discovers --- but to tell if the project is succeeding on its own
 terms, and perhaps secondarily to get advance notice of forces that
 may cause the project to evolve from one archetype to another.
 
-(TBD: Connect with \fullref{evolution}: if you're expecting certain
+(TBD: Connect with \fullref{transitions}: if you're expecting certain
 metrics, and you see something slightly different from that, it could
 indicate that the project is transitioning to (or possibly from) some
 other archetype.  This might be desirable or might not be, but either
@@ -1962,7 +1975,127 @@ These measurements are currently in no particular order:
 
 \end{itemize}
 
-\unnumberedsection{Practical Questions To Ask About A Project}\label{practical-questions}
+\numberedsection{Business Models and Archetypes}\label{business-models}
+
+A project's archetype should be just one component of a larger
+strategy, and the strategy should drive the archetype, not the other
+way around.  If you find yourself thinking ``Okay, we have a Rocket
+Ship to Mars project here.  What business models can it support?'',
+that would be putting the cart before the horse.  The better way is to
+start from strategy: ``The business model we see this project being
+part of is X.  What archetypes work well with X?''  (There may be more
+than one business model, of course, just as the project may end up
+incorporating elements from multiple archetypes.)
+
+Different archetypes are suited to different business models, just as
+there different open source license are suited to different kinds of
+for-profit activity.  In licensing, there are times when a
+non-copyleft\footnote{A.k.a. ``permissive''.  See
+  \fullref{licenses-variation}.} license is the right choice, given
+your intended business model (perhaps widespread adoption is crucial
+to your plans), and there are times when the strongest possible
+copyleft\footnote{E.g., Currently the AGPL.  As of this writing in
+  early 2019, the debate over whether the newly-created ``Server Side
+  Public License'' from MongoDB is or is not a free software / open
+  source license is still very new.  Because it has not yet been
+  evaluated by the OSI nor declared a free software license by the
+  FSF, we take a conservative approach and do not consider it here.
+  This does not imply any position on whether it is or isn't a free
+  and open source (FOSS) license.  It simply acknowledges the
+  practical reality that SSPL-licensed software is not going to be
+  widely treated as FOSS unless and until the relevant certifying
+  organizations treat it as FOSS.  See
+  \fullref{appdx-licensing-basics} for more context.} is the right
+choice (perhaps avoidance of proprietary derivatives is crucial to
+your plans).
+
+Similar considerations apply to choosing an archetype.  If gaining
+mindshare among individual developers is crucial, then you need an
+archetype (such as Wide Open) that prioritizes participant onboarding,
+even if it means paying a price in development speed or in other
+technical goals.  If building a coalition to forestall market
+domination by a large competitor is your goal, then an archetype
+designed for inter-organizational collaboration (such as B2B or
+Multi-Vendor Infrastructure)
+
+Remember that ``business model'' is a superset of ``revenue model''.
+A revenue model is just one part of a business model.  You must start
+from a clear definition of your product and your value proposition.
+Businesses that look at first glance like they are based on a
+royalty-per-copy revenue model often turn out, on closer examination,
+to be more complex than that.  For example, sometimes a business
+\emph{thinks} it is selling per-seat or per-server usage rights, while
+its customers think they're what they're paying for is support, vetted
+installation, configuration convenience, and regular updates for
+features and for security upgrades.
+
+Most revenue models are compatible with open source generally.
+Really, the only one that is firmly incompatible with open source is
+the one based on per-copy royalties for software sales.  While that
+can be a very successful\footnote{If you define success primarily in
+  terms of revenue generation, that is.  For mission-driven
+  organizations, success involves more than that anyway.} revenue
+model under certain circumstances, it is far from the only one.
+
+This report is not the place for an in-depth discussion of value
+creation, value capture, market definition, and revenue models.  We
+note these complex topics merely to point out that any given open
+source archetype will be better-suited to some business models and
+worse-suited to others.  In order to determine which archetype is best
+for your project, you must start from the high-level strategy --- in
+which revenue is just one element --- that motivated your project in
+the first place.
+
+\numberedsection{Transitions: Changing From One Archetype To Another}\label{transitions}
+
+Projects can change from one archetype to another, and often do.  It
+may be a deliberate and guided transformation, or it may be a gradual
+and incremental evolution that is not driven by any one participant.
+
+An example of a deliberate transition is Firefox, which went from
+Rocket Ship To Mars (or something close to that) during its initial
+push to a 1.0 release to a mode much closer today to Mass Market.
+
+An example of a less centrally-driven and more incremental transition
+is the WordPress open source project, which has been moving gradually
+from something like Trusted Vendor to something more like Controlled
+Ecosystem over a long period of time.  WordPress's transition has
+occurred with the acquiescence and probably the encouragement of
+WordPress's primary commercial backer, Automattic, Inc.  This is
+probably the common case: with the exception of genuine hard forks, it
+is rare for an archetype transition to occur entirely against the
+wishes of the most-invested community members, although that does not
+mean that every such transition is consciously driven by those members
+either.
+
+In general, transformations from Rocket Ship To Mars to some other
+archetype are among the most common, because they reflect a natural
+progression: from a small, focused, and unified core team working on
+something new, to a position where more people are involved and have
+broadening influence in the project.  If those new arrivals
+are mostly developers whose motives are immediate rather than
+strategic, that transformation might be toward Specialty Library.  If
+they are developers using the code as part of other programs, it might
+be toward Trusted Vendor or Upstream Dependency.  If they are plugin
+developers and API consumers, it might be toward Controlled Ecosystem.
+If they are organizations or organizationally-motivated developers,
+B2B or Multi-Vendor Infrastructure might be likely places to end up.
+If they are users, or a combination of users and developers, that
+might point the way toward Mass Market or Wide Open.
+
+Rocket Ship To Mars is not the only starting point for archetype
+transitions.  A project might move from B2B to Upstream Dependency as
+it becomes commoditized, for example, perhaps through competition or
+perhaps just through rapid adoption.  We will not attempt here to map
+out the full combinatoric range of possible archetype transitions.
+Having such a map would not be very useful anyway.  What is useful
+instead is to be always alert to the possibility of transformation,
+and to ask, at strategic points in a project's life cycle, whether a
+purposeful transformation might be called for, and whether there might
+be bottom-up pressure pushing the project toward a particular new
+archetype.
+
+\numberedsection{Choosing An Archetype: Practical Questions}\label{practical-questions}
 
 This section presents a checklist of practical questions that can
 either confirm a choice of archetype or, perhaps, help draw out latent
@@ -2126,7 +2259,7 @@ be a good idea to give them that voice.
   
   \item {\bf Which open source license does it use?}
   
-    See \fullref{licensing-basics} for more on this topic.
+    See \fullref{appdx-licensing-basics} for more on this topic.
 
     \begin{itemize}
       \item Main question: how much copyleft is appropriate?  None,
@@ -2184,7 +2317,45 @@ be a good idea to give them that voice.
 
 \end{itemize}
 
-\unnumberedsection{Basics of Open Source Licensing}\label{licensing-basics}
+\numberedsection{Methodology}\label{methodology}
+
+To prepare this report, we interviewed about a dozen
+Mozilla-affiliated people with diverse views on open source across a
+range of Mozilla initiatives and products.  Initially, those
+interviews focused on a few Mozilla efforts (Firefox, Rust, and
+Servo), but eventually they grew to include discussions of many Mozilla
+efforts and delved into policy beyond just open source.  We also drew
+on examinations of open source projects unaffiliated with Mozilla; we
+initiated some of those examinations specifically for this report, and
+had already done others as part of previous research efforts.
+
+\unnumberedsection{Acknowledgements}\label{acknowledgements}
+
+We are grateful to all of the interviewees at Mozilla who gave
+generously of their time and expertise.  We have not named them here,
+in part because some asked not to be named (in order to speak
+frankly), and in part because each archetype should stand on its own
+and not be associated with any particular person.
+
+\newpage
+
+\unnumberedsection{Copyright}\label{copyright}
+
+\copyright \, 2018 The Mozilla Foundation and Open Tech Strategies
+
+\begin{small}
+This work is licensed under the Creative Common Attribution-ShareAlike
+3.0 Unported License. To view a copy of this license, visit
+\otsurl{http://creativecommons.org/licenses/by-sa/3.0/} or send a
+letter to:
+
+Creative Commons\\
+PO Box 1866\\
+Mountain View, CA 94042\\
+USA
+\end{small}
+
+\appdxsection{Basics of Open Source Licensing}\label{appdx-licensing-basics}
 
 Although many Mozillians have a great deal of familiarity with the
 intricacies of different open source licenses, not everyone does.
@@ -2269,13 +2440,13 @@ redistribute the code.
     here.  One widely-used copyleft license, the GNU General Public
     License (GPL), says more or less that distribution of source code
     under the GPL is required only when the corresponding binary
-    executable is distributed.  This means that a SaaS product can
-    include GPL'd code, and as long as the actual executable is never
-    distributed to third parties, there is no requirement to release
-    the entire work under the GPL.  (Many large SaaS companies are
-    actually in this position.)  A more recent variant of
-    the GPL, the Affero GPL (AGPL), closes that gap: a user who merely
-    accesses the program's functionality over a network thereby
+    executable is distributed.  This means that if SaaS product
+    includes GPL'd code, then as long as the actual executable is
+    never distributed to third parties, there is no requirement to
+    release the entire work under the GPL.  (Many large SaaS companies
+    are actually in this position.)  A more recent variant of the GPL,
+    the Affero GPL (AGPL), partially closes that gap: a user who
+    merely accesses the program's functionality over a network thereby
     acquires the right to request full source code under the AGPL.
 
     Mozilla's own license, the Mozilla Public License, is a kind of
@@ -2425,44 +2596,6 @@ itself is not obliged to abide by the terms of the AGPL at least as
 long as Mozilla is the sole copyright holder (though in practice
 Mozilla should conspicuously abide by those terms anyway, of course, for
 strategic reasons that go beyond its formal obligations as licensor).
-
-\unnumberedsection{Methodology}\label{methodology}
-
-To prepare this report, we interviewed about a dozen
-Mozilla-affiliated people with diverse views on open source across a
-range of Mozilla initiatives and products.  Initially, those
-interviews focused on a few Mozilla efforts (Firefox, Rust, and
-Servo), but eventually they grew to include discussions of many Mozilla
-efforts and delved into policy beyond just open source.  We also drew
-on examinations of open source projects unaffiliated with Mozilla; we
-initiated some of those examinations specifically for this report, and
-had already done others as part of previous research efforts.
-
-\unnumberedsection{Acknowledgements}\label{acknowledgements}
-
-We are grateful to all of the interviewees at Mozilla who gave
-generously of their time and expertise.  We have not named them here,
-in part because some asked not to be named (in order to speak
-frankly), and in part because each archetype should stand on its own
-and not be associated with any particular person.
-
-\newpage
-
-\unnumberedsection{Copyright}\label{copyright}
-
-\copyright \, 2018 The Mozilla Foundation and Open Tech Strategies
-
-\begin{small}
-This work is licensed under the Creative Common Attribution-ShareAlike
-3.0 Unported License. To view a copy of this license, visit
-\otsurl{http://creativecommons.org/licenses/by-sa/3.0/} or send a
-letter to:
-
-Creative Commons\\
-PO Box 1866\\
-Mountain View, CA 94042\\
-USA
-\end{small}
 
 \appdxsection{Work On ``Openness'' At Mozilla}\label{appdx-openness}
 
