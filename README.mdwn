@@ -1,7 +1,7 @@
-Open source is a broad term that encompasses many different types of
+"Open source" is a broad term that encompasses many different types of
 projects.  There is a wide range of open source approaches, and
 sometimes it helps to think through how your open source approach
-matches your goals, resources, and environment.  
+matches your goals, resources, and environment.
 
 We often see "open source project" used as a catch-all term to
 describe very different projects that share only the fact that their
