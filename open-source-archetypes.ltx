@@ -2357,7 +2357,17 @@ Mountain View, CA 94042\\
 USA
 \end{small}
 
-\appdxsection{Basics of Open Source Licensing}\label{appdx-licensing-basics}
+% TBD: Using \unnumberedsection here for now (instead of \appdxsection
+% and then \appdxsub... within) because appendix numbering is broken:
+% both appendices got called "Appendix J".
+% 
+% I suspect this bug is due to the fact that we use a mixture of
+% \unnumberedsection and \numberedsection for the sections that come
+% before the appendices.  This suspicion is furthered by the following
+% facts: "J" is the 10th letter of the alphabet and there were exactly
+% 10 numbered sections when this bug manifested itself with "J"; and
+% when there were 9 numbered sections, both appendices got called "I".
+\unnumberedsection{Appendix A: Basics of Open Source Licensing}\label{appdx-licensing-basics}
 
 Although many Mozillians have a great deal of familiarity with the
 intricacies of different open source licenses, not everyone does.
@@ -2371,7 +2381,7 @@ legal advice.\footnote{Some of the material here is adapted from
   resources.}  You should consult your organization's legal department
 on all licensing and other legal matters.
 
-\appdxsubsection{Elements common to all open source licenses}\label{licenses-common}
+\subsection{Elements common to all open source licenses}\label{licenses-common}
 
 All open source licenses offer a core set of fundamental and
 non-revocable rights, granted by the licensor (the copyright owner of
@@ -2393,7 +2403,7 @@ Virtually all open source licenses also include a prominent disclaimer
 of liability, so that the licensor cannot be held responsible if the
 code (even in unmodified form) causes a recipient's computer to melt.
 
-\appdxsubsection{Elements that vary across open source licenses}\label{licenses-variation}
+\subsection{Elements that vary across open source licenses}\label{licenses-variation}
 
 In addition to the core freedoms described above, some open source
 licenses include some additional conditions.  Usually these conditions
@@ -2546,7 +2556,7 @@ redistribute the code.
 
 \end{itemize}
 
-\appdxsubsubsection{License Compatibility}\label{license-compatibility}
+\subsubsection{License Compatibility}\label{license-compatibility}
 
 The non-copyleft open source licenses are generally compatible with
 each other, meaning that code under one license can be combined with
@@ -2564,7 +2574,7 @@ when starting any new project.  One of the most important questions to
 ask about a new project is what other licenses the project's code will
 need to be able to be combined with.
 
-\appdxsubsubsection{License Enforcement and Receiving Contributions}\label{license-enforcement-and-contributors}
+\subsubsection{License Enforcement and Receiving Contributions}\label{license-enforcement-and-contributors}
     
 For all open source software --- indeed, for any copyrighted work ---
 the copyright holder is the only entity with standing to enforce the
@@ -2599,7 +2609,10 @@ long as Mozilla is the sole copyright holder (though in practice
 Mozilla should conspicuously abide by those terms anyway, of course, for
 strategic reasons that go beyond its formal obligations as licensor).
 
-\appdxsection{Work On ``Openness'' At Mozilla}\label{appdx-openness}
+% TBD: Using \unnumberedsection here for now (instead of \appdxsection
+% and then \appdxsub... within).  See comment before the first
+% appendix for details.
+\unnumberedsection{Appendix B: Work On ``Openness'' At Mozilla}\label{appdx-openness}
 
 In 2017, Mozilla's Open Innovation team completed a thorough review of
 the use of ``openness'' as a competitive advantage in Mozilla software
