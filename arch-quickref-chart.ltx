@@ -1,0 +1,364 @@
+\numberedsection{Quick-Reference Comparison Of All Archetypes}\label{quick-ref}
+
+% We eventually decided not to use these two figures, and their
+% placement in the page was wonky anyway.  But we've left them here
+% commented out in case anyone wants to take a look at them.
+%
+% \begin{figure}[h]
+%   \centering
+%   \caption{\emph{Archetypes mapped by inclusiveness and
+%       development speed.}}
+%   \vspace{.5em}
+%   \includegraphics[width=0.9\textwidth]{fast-slow-archetypes.png}
+% \end{figure}
+% 
+% \begin{figure}[h]
+%   \centering
+%   \caption{\emph{Archetypes mapped by inclusiveness and typical
+%       participant type.  (None sit at the extreme end of
+%       individual participation only because organizational
+%       participation in open source has become so normal.  Even
+%       individuals who have personal motivations still frequently make
+%       many of their contributions as part of their jobs; the map tries
+%       to take this into account.)}}
+%   \vspace{1em}
+%   \includegraphics[width=0.9\textwidth]{individual-biz-archetypes.png}
+% \end{figure}
+
+% These settings are just for the page with the table, and will have
+% to be undone at the end of the table.  (The \addtolength idea is
+% from http://timmurphy.org/2009/07/22/adjusting-latex-margins/.)
+\addtolength{\textwidth}{1.8cm}
+\addtolength{\hoffset}{-1.8cm}
+\begin{spacing}{.52}  % Adjust this to set spacing between lines in cell text.
+
+\begin{table}[H]
+  \begin{longtable}{| m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | }
+    \hline
+    % I wish we knew how to get rid of the pointless border around the
+    % unused upper left cell (the one with "\cellcolor{plainwhite}"
+    % below).  But we haven't figured out a way to do that yet without
+    % messing up the rest of the chart, so for now, leave it be.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Header row
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \rowcolor{tableheader} \cellcolor{plainwhite}                         \
+    & {\footnotesize B2B}                                                 \
+    & {\footnotesize Multi-Vendor Infra}                                  \
+    & {\footnotesize Rocket Ship to Mars}                                 \
+    & {\footnotesize Controlled Ecosystem}                                \
+    & {\footnotesize Wide Open}                                           \
+    & {\footnotesize Mass Market}                                         \
+    & {\footnotesize Specialty Library}                                   \
+    & {\footnotesize Trusted Vendor}                                      \
+    & {\footnotesize Upstream Dependency}                              \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Subsequent rows
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Main benefit}                   \
+    % b2b:
+    & {\tiny Driving industry adoption of your technology.}               \
+    % multivendor-infra:
+    & {\tiny Collaboration with partners; address a set of shared problems.} \
+    % mars:
+    & {\tiny Quick, focused effect in a specific area.}                   \
+    % ctrl-ecosys:
+    & {\tiny Can build a sustainable ecosystem in which founding organization has strong influence.} \
+    % wide-open:
+    & {\tiny Large-scale collaboration; community can become self-sustaining.} \
+    % mass-mkt:
+    & {\tiny Large user base can make project broadly influential.}       \
+    % specialty-lib:
+    & {\tiny Ensure quality solution to a specific problem; can lead to new partners.} \
+    % trusted-vendor:
+    & {\tiny Loyalty of downstream consumers helps project stability.}    \
+    % upstream-dep:
+    & {\tiny Broad reach across (hence insight into) many dependee projects.} \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Main drawback}                  \
+    % b2b:
+    & {\tiny Little or no collaborative development.}                     \
+    % multivendor-infra:
+    & {\tiny Sometimes off-putting to individual contributors.}           \
+    % mars:
+    & {\tiny Collaboration only available from those who share a very specific vision.} \
+    % ctrl-ecosys:
+    & {\tiny Compromise needed to avoid forks (esp. commercial).}         \
+    % wide-open:
+    & {\tiny Effort to maintain onboarding paths \& manage all participants.} \
+    % mass-mkt:
+    & {\tiny Huge user base needs filtering for dev community.}           \
+    % specialty-lib:
+    & {\tiny High barriers to entry; relatively small developer pool.}    \
+    % trusted-vendor:
+    & {\tiny Primary org must be careful how it uses its position.}       \
+    % upstream-dep:
+    & {\tiny Developer base can sometimes be lightly motivated.}       \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Main situational consideration} \
+    % b2b:
+    & {\tiny Requires major market power to be effective. }               \
+    % multivendor-infra:
+    & {\tiny Business needs of participants affect community management.} \
+    % mars:
+    & {\tiny Everything depends on success of original vision.}           \
+    % ctrl-ecosys:
+    & {\tiny Participants have many motivations (commercial \& non-commercial).} \
+    % wide-open:
+    & {\tiny Differing commitment \& engagement levels among participants.}  \
+    % mass-mkt:
+    & {\tiny Contributor base does not accurately represent user base.}   \
+    % specialty-lib:
+    & {\tiny Standard-setting effects (\foreignphrase{de facto} or official).} \
+    % trusted-vendor:
+    & {\tiny Customer needs vs open source project needs.}                \
+    % upstream-dep:
+    & {\tiny Usage patterns of downstream consumers.}                  \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Development speed}              \
+    % b2b:
+    & {\tiny Fast; pace set by business goals.}                           \
+    % multivendor-infra:
+    & {\tiny Usually moderate, but depends on needs of participants.}     \
+    % mars:
+    & {\tiny Fast; escape velocity.}                                      \
+    % ctrl-ecosys:
+    & {\tiny Medium.}                                                     \
+    % wide-open:
+    & {\tiny Slow - medium; some process overhead.}                       \
+    % mass-mkt:
+    & {\tiny Slow - medium; swift change destabilizes user base.}         \
+    % specialty-lib:
+    & {\tiny Gets slower over time, as library stabilizes.}               \
+    % trusted-vendor:
+    & {\tiny Medium.  Primary vendor momentum vs third-party needs.}      \
+    % upstream-dep:
+    & {\tiny Medium; may slow down as standard settles.}     \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Component coupling}             \
+    % b2b:
+    & {\tiny Tightly coupled, to market one unified product.}             \
+    % multivendor-infra:
+    & {\tiny Loosely-coupled with de facto standards.}                    \
+    % mars:
+    & {\tiny Tight, to ship one core product.}                            \
+    % ctrl-ecosys:
+    & {\tiny Loosely coupled, often with plugin system.}                  \
+    % wide-open:
+    & {\tiny Variable.}                                                   \
+    % mass-mkt:
+    & {\tiny Variable.}                                                   \
+    % specialty-lib:
+    & {\tiny Tightly coupled.}                                            \
+    % trusted-vendor:
+    & {\tiny Tightly coupled.}                                            \
+    % upstream-dep:
+    & {\tiny Standalone; decoupled from one another \& from downstream projects.} \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Typical participant type}       \
+    % b2b:
+    & {\tiny Organizational reps.}                                        \
+    % multivendor-infra:
+    & {\tiny Organizational reps.}                                        \
+    % mars:
+    & {\tiny Founding organization.}                                      \
+    % ctrl-ecosys:
+    & {\tiny Founder, some external core contributors, many plugin contributors.} \
+    % wide-open:
+    & {\tiny Open to anyone; participant demographic depends on project.} \
+    % mass-mkt:
+    & {\tiny Organizational reps, redistributor reps; some users who are technical.} \
+    % specialty-lib:
+    & {\tiny Developers with expertise in the relevant field.}            \
+    % trusted-vendor:
+    & {\tiny Customer reps (both paying and non-paying); some one-off contributors.} \
+    % upstream-dep:
+    & {\tiny Downstream devs.}                                         \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Typical licensing}              \
+    % b2b:
+    & {\tiny Almost always non-copyleft.}                                 \
+    % multivendor-infra:
+    & {\tiny Usually non-copyleft, because many internal forks.}          \
+    % mars:
+    & {\tiny Usually non-copyleft, but with occasional exceptions.}       \
+    % ctrl-ecosys:
+    & {\tiny Any, but requires thought re plugins.}                       \
+    % wide-open:
+    & {\tiny Any.}                                                        \
+    % mass-mkt:
+    & {\tiny Usually non-copyleft, but depends on business strategy.}     \
+    % specialty-lib:
+    & {\tiny Usually non-copyleft.}                                       \
+    % trusted-vendor:
+    & {\tiny Either; copyleft sometimes used to discourage competitive forks.} \
+    % upstream-dep:
+    & {\tiny Usually non-copyleft.}                                    \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Ease of onboarding}             \
+    % b2b:
+    & {\tiny Hard.}                                                       \
+    % multivendor-infra:
+    & {\tiny Medium.}                                                     \
+    % mars:
+    & {\tiny Hard.}                                                       \
+    % ctrl-ecosys:
+    & {\tiny Medium.}                                                     \
+    % wide-open:
+    & {\tiny Easy.}                                                       \
+    % mass-mkt:
+    & {\tiny Easy to medium.}                                             \
+    % specialty-lib:
+    & {\tiny Depends on technical complexity.}                            \
+    % trusted-vendor:
+    & {\tiny Medium to hard.}                                             \
+    % upstream-dep:
+    & {\tiny Depends on technical complexity.}                         \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Community standards}            \
+    % b2b:
+    & {\tiny Oriented toward organizations.}                              \
+    % multivendor-infra:
+    & {\tiny Welcoming but formal; difficult for individuals.}            \
+    % mars:
+    & {\tiny Focused on core group.}                                      \
+    % ctrl-ecosys:
+    & {\tiny Welcoming, with some onboarding structures.}                 \
+    % wide-open:
+    & {\tiny Very welcoming, formalized onboarding systems.}              \
+    % mass-mkt:
+    & {\tiny Fully open; scales via users helping users.}                 \
+    % specialty-lib:
+    & {\tiny High barrier; contributors need to be experts.}              \
+    % trusted-vendor:
+    & {\tiny Clear boundaries: users have mainly roadmap input.}          \
+    % upstream-dep:
+    & {\tiny Welcoming; amenable to one-time contributions.}           \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Typical governance}             \
+    % b2b:
+    & {\tiny Lead company plus partners.}                                 \
+    % multivendor-infra:
+    & {\tiny Committee of organizational reps.}                           \
+    % mars:
+    & {\tiny Founder governs with iron fist.}                             \
+    % ctrl-ecosys:
+    & {\tiny Benevolent dictatorship; tries to avoid forks.}              \
+    % wide-open:
+    & {\tiny Group-based; consensus / democratic.}                        \
+    % mass-mkt:
+    & {\tiny Main organization leads, with outside input.}                \
+    % specialty-lib:
+    & {\tiny Multi-party committer group.}                                \
+    % trusted-vendor:
+    & {\tiny Main vendor leads.}                                          \
+    % upstream-dep:
+    & {\tiny Informal, maintainer-led, committer groups.}              \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Measures of open source
+      success}                                                            \
+    % b2b:
+    & {\tiny
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Adoption by target partners (aiming for dominant levels).
+          \item Code contributions from partner organizations.
+          \item Successful projects built around core project.
+        \end{enumerate}
+      }                                                                   \
+    % multivendor-infra:
+    & {\tiny
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Partners contributing at equal and high levels.
+          \item Longevity of contribution by committers.
+          \item Variety of organizations contributing.
+        \end{enumerate}
+      }                                                                   \
+    % mars:
+    & {\tiny 
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Speed of development
+          \item Adoption by target users
+          \item Achieving original technical goals
+        \end{enumerate}
+      }                                                                   \
+    % ctrl-ecosys:
+    & {\tiny 
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Adoption by target users
+          \item Increase in number of extension developers
+          \item Overall cohesiveness of community
+        \end{enumerate}
+      }                                                                   \
+    % wide-open:
+    & {\tiny 
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Growth in number of contributors
+          \item Efficiency of contribution
+          \item Variety in where decisions get made
+        \end{enumerate}
+      }                                                                   \
+    % mass-mkt:
+    & {\tiny 
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Awareness among users that project is open source
+          \item Growth in non-technical contributors
+          \item Effective filtering of user feedback to developers
+        \end{enumerate}
+      }                                                                   \
+    % specialty-lib:
+    & {\tiny 
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Adoption by intended domain (perhaps even dominant
+            adoption)
+          \item High quality of contributors
+          \item High quality of code
+        \end{enumerate}
+      }                                                                   \
+    % trusted-vendor:
+    & {\tiny
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Absence of competitive forks
+          \item Business needs of vendor served
+          \item Vendor's leadership accepted by community
+        \end{enumerate}
+      }                                                                   \
+    % upstream-dep:
+    & {\tiny
+        \begin{enumerate}[wide, labelwidth=!, labelindent=0pt, nosep]
+          \item Multiple competitive distributions
+          \item Longevity of participation
+          \item Bug reports tend to be technical and constructive
+        \end{enumerate}
+      }                                                                \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Examples}                       \
+    % b2b:
+    & {\tiny Android; Chromium.}                                          \
+    % multivendor-infra:
+    & {\tiny Kubernetes; Open Stack.}                                     \
+    % mars:
+    & {\tiny Meteor; Signal.}                                             \
+    % ctrl-ecosys:
+    & {\tiny WordPress; Drupal.}                                          \
+    % wide-open:
+    & {\tiny Rust (present day); Apache HTTPD.}                           \
+    % mass-mkt:
+    & {\tiny Firefox; MediaWiki (due to Wikipedia instance).}             \
+    % specialty-lib:
+    & {\tiny libssl; libmp4.}                                             \
+    % trusted-vendor:
+    & {\tiny MongoDB; Hypothes.is; Coral.}                                \
+    % upstream-dep:
+    & {\tiny OpenSSL; WebKit; just about every small JavaScript library on GitHub.} \\ \hline
+  \end{longtable}
+\end{table}
+
+% Restore original values as promised.
+\end{spacing}
+
+\newpage
+
+% You have to do these two after the newpage, otherwise the table is
+% still affected, Because LaTeX.
+\addtolength{\textwidth}{-1.8cm}
+\addtolength{\hoffset}{1.8cm}

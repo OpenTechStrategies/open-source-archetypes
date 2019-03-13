@@ -1,0 +1,71 @@
+\subsection{Trusted Vendor}\label{archetype:trusted-vendor}
+
+{\bf Examples:} \emph{MongoDB, Hypothes.is, Coral}
+
+{\bf Characteristics:} Overall project direction steered by a central
+party --- usually the founding organization --- but with
+encouragement of an active commercial ecosystem based on the project,
+thus requiring occasional restraint or non-competitive behavior on the
+part of the primary maintainer.
+
+The guiding principle behind the Trusted Vendor archetype is that
+nobody can build everything.  Sometimes people just want a complete
+solution from a vendor.  Switching costs for such products are often
+high, so choosing a proprietary solution could lock one into a
+technology and a vendor.  That lock-in and the related dependence
+gives vendors power over their customers and users, which allows
+vendors to overprice and underdeliver.  Customers and users too often
+find themselves trapped in a relationship that doesn't meet their
+needs and sometimes feels abusive.
+
+Open source is the antidote to vendor lock-in.  First, it enables
+competition.  If a vendor fails or pivots or suddenly raises prices, a
+functioning open source ecosystem can provide a replacement without
+high switching costs.  Second, open source ecosystems tend toward open
+standards.  Integration, custom development, or even switching all
+come easier, faster and cheaper if the underlying solution makes good
+use of common standards.
+
+This connection between open source and risk-free vendor dependence is
+strong enough to shift customer preferences.  More and more
+procurement processes are aimed at open source solutions precisely
+because they avoid lock-in during long-term vendor relations.
+
+There are other elements of trust besides just defusing the threat of
+lock-in.  Some of the benefits described for the ``Wide Open''
+archetype are also present in Trusted Vendor.  In the latter case,
+though, those benefits are often mainly signaling mechanisms: even if
+customers never take direct advantage of the available collaboration
+mechanisms, they are reassured by the existence of those mechanisms.
+
+However, as products mature, fulfilling the promise of those
+mechanisms can become a prerequisite for jump-starting the third-party
+vendor and integrator ecosystem, which may eventually cause a
+project to shift to something more like the Multi-Vendor
+Infrastructure archetype.  In Trusted Vendor projects, the primary
+maintainer retains more control over project direction than in
+Multi-Vendor Infrastructure.  The commitment to being an honest broker requires the
+maintainer to make certain commitments about what it will and won't do
+with that control, both in terms of the project's technical roadmap
+and in terms of allowing --- indeed, encouraging --- other vendors to
+flourish by basing their own services on the software.  A Trusted
+Vendor must actively avoid exclusive or monopoly powers and even avoid
+some of the competitive privileges that usually come with being a
+project's prime mover.
+
+For Mozilla, this archetype can be an attractive differentiating
+advantage when building services or infrastructure for the open web.
+A deep commitment to privacy, data access, and open standards all mesh
+well with the need to build trust that allows low risk dependence.
+
+\begin{itemize}
+\item {\bf Licensing}: Can be copyleft or non-copyleft; copyleft is
+  often used to discourage competition from forking.
+\item {\bf Community standards}: Users and contributors have input to
+  roadmap, though they may not contribute directly.
+\item {\bf Component coupling}: Tightly coupled.
+\item {\bf Main benefits}: User community --- including deployers and
+  commercial support vendors --- tends to be long-term, which provides
+  both stability and word-of-mouth marketing to the project.
+\item {\bf Typical governance}: Maintainer-led by the vendor.
+\end{itemize}

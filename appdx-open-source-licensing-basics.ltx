@@ -1,0 +1,251 @@
+% TBD: Using \unnumberedsection here for now (instead of \appdxsection
+% and then \appdxsub... within) because appendix numbering is broken:
+% both appendices got called "Appendix J".
+% 
+% I suspect this bug is due to the fact that we use a mixture of
+% \unnumberedsection and \numberedsection for the sections that come
+% before the appendices.  This suspicion is furthered by the following
+% facts: "J" is the 10th letter of the alphabet and there were exactly
+% 10 numbered sections when this bug manifested itself with "J"; and
+% when there were 9 numbered sections, both appendices got called "I".
+\unnumberedsection{Appendix A: Basics of Open Source Licensing}\label{appdx-licensing-basics}
+
+Although many Mozillians have a great deal of familiarity with the
+intricacies of different open source licenses, not everyone does.
+This section provides the basic vocabulary and concepts needed to
+understand the most important choices in open source licensing; it is
+not a complete guide to open source licensing, however, and it is not
+legal advice.\footnote{Some of the material here is adapted from
+  \otsurl{https://producingoss.com/en/legal.html}, which is also not a
+  complete guide to open source licensing, and is likewise not legal
+  advice, but does offer more details and pointers to further
+  resources.}  You should consult your organization's legal department
+on all licensing and other legal matters.
+
+\subsection{Elements common to all open source licenses}\label{licenses-common}
+
+All open source licenses offer a core set of fundamental and
+non-revocable rights, granted by the licensor (the copyright owner of
+the code) to the recipient (the ``licensee''):
+
+\begin{itemize}
+  \item Anyone can \emph{use} the software for any purpose.
+  \item Anyone can \emph{modify} the software's source code.  (This
+    means, by the way, that source code is the thing to which an open
+    source license applies.  It would make no sense to release
+    binary-only software under an open source license, and if one were
+    to do so, no one else would consider it to be an open source
+    release.)
+  \item Anyone can \emph{redistribute} the software, in both original
+    and modified form, to anyone else, under the same license.
+\end{itemize}
+
+Virtually all open source licenses also include a prominent disclaimer
+of liability, so that the licensor cannot be held responsible if the
+code (even in unmodified form) causes a recipient's computer to melt.
+
+\subsection{Elements that vary across open source licenses}\label{licenses-variation}
+
+In addition to the core freedoms described above, some open source
+licenses include some additional conditions.  Usually these conditions
+place certain demands on the recipient, or constraints on the
+recipients' behavior, in exchange for the recipient's right to use and
+redistribute the code.
+
+\begin{itemize}
+  \item \emph{copyleft vs non-copyleft} (a.k.a. \emph{reciprocal vs non-reciprocal})
+
+    Some open source licenses have a \otsfirstterm{copyleft} (also
+    called \otsfirstterm{reciprocal}) license provision, meaning that
+    derivative works (i.e. works based on the original) may only be distributed under the same open
+    source license as the original.  Furthermore, copyleft says that
+    under certain circumstances distribution \emph{must} take place:
+    that is, your right to use the code depends on the license you
+    received it under, and in a copyleft license that right is
+    contingent on you redistributing the code to others who meet
+    certain requirements and request redistribution.
+
+    In practice, this boils down to the question of whether the code
+    can be used in proprietary products.  With a
+    \otsfirstterm{non-copyleft} or \otsfirstterm{non-reciprocal}
+    license\footnote{Sometimes people call non-copyleft licenses
+      ``permissive'' licenses.  We have avoided that terminology here
+      because it seems to imply that copyleft licenses are somehow
+      non-permissive, which would be inaccurate.  Copyleft licenses
+      grant all the same rights as non-copyleft licenses, and merely
+      ask that one refrain from imposing restrictions --- that is,
+      refrain from behaving non-permissively --- toward others
+      downstream.}, the open source code can be used as part of a
+    proprietary product: the program as a whole continues to be
+    distributed under its proprietary license, while containing some
+    code from a non-proprietary source.
+
+    The Apache License, X Consortium License, BSD-style license, and
+    the MIT-style license are all examples of non-copyleft,
+    proprietary-compatible licenses.
+
+    A copyleft license, on the other hand, means that when the covered
+    code is included in a product, that product can only be
+    distributed under the same copyleft license --- in effect, the
+    product cannot be proprietary.
+
+    There are some complexities to this, which we will only touch on
+    here.  One widely-used copyleft license, the GNU General Public
+    License (GPL), says more or less that distribution of source code
+    under the GPL is required only when the corresponding binary
+    executable is distributed.  This means that if SaaS product
+    includes GPL'd code, then as long as the actual executable is
+    never distributed to third parties, there is no requirement to
+    release the entire work under the GPL.  (Many large SaaS companies
+    are actually in this position.)  A more recent variant of the GPL,
+    the Affero GPL (AGPL), partially closes that gap: a user who
+    merely accesses the program's functionality over a network thereby
+    acquires the right to request full source code under the AGPL.
+
+    Mozilla's own license, the Mozilla Public License, is a kind of
+    half-copyleft (sometimes called ``weak copyleft'') open source
+    license.  It requires redistribution of derived works under the
+    MPL, but has a very narrow definition of what constitutes a
+    derived work: essentially, modifications to the original files
+    distributed under the MPL must be released under the MPL, but
+    surrounding code that merely \emph{calls} code from those files
+    may remain under a proprietary or other non-MPL license.
+
+    When thinking about copyleft vs non-copyleft, it is helpful to
+    keep in mind that ``proprietary'' is not the same as
+    ``commercial''.  A copyleft program can be used for commercial
+    purposes, just as any open source program can be, and the copyleft
+    license permits charging money for the act of redistribution as
+    long as the redistribution is done under the same license.  Of
+    course, this means that the recipient could then start handing out
+    copies for free, which in turn makes it difficult for anyone else
+    to charge a lot of money for a copy, so in practice the price of
+    acquiring copies is driven to zero pretty quickly.\footnote{But
+      see Red Hat, which distributes open source software mingled with
+      proprietary elements that encumber redistributing entire copies
+      of RHEL.}
+
+  \item \emph{attribution}
+
+    Most open source licenses stipulate that any use of the covered
+    code be accompanied by a notice, whose placement and display is
+    usually specified, giving credit to the authors or copyright
+    holders of the code.  
+
+    These attribution requirements tend not to be onerous.  They
+    usually specify that credit be preserved in the source code files,
+    and sometimes specify that if a program displays a credits list in
+    some usual way, the open source attribution should be included in
+    those credits.
+
+  \item \emph{protection of trademark}
+
+    (This may be thought of as a variant of attribution requirements.)
+
+    Trademark-protecting open source licenses specify that the name of
+    the original software --- or its copyright holders, or their
+    institution, etc. --- may not be used to identify derivative
+    works, at least not without prior written permission.
+
+    This can usually be done entirely via trademark law anyway,
+    without reference to the software's copyright license, so such
+    clauses can be somewhat legally redundant.  In effect, they
+    amplify a trademark infringement into a copyright infringement as
+    well, thus giving the licensor more options for enforcement.
+
+  \item \emph{patent snapback}
+
+    Certain licenses (e.g., the GNU General Public License version 3,
+    the Apache License version 2, the Mozilla Public License 2.0, and
+    a few others) contain language designed to prevent people from
+    using patent law to take away open source rights that were granted
+    under copyright law.
+
+    These clauses require contributors to grant patent licenses along
+    with their contribution, usually covering any patents licenseable
+    by the contributor that could be infringed by their contribution
+    (or by the incorporation of their contribution into the work as a
+    whole).  Then the open source license takes it one step further:
+    if someone using software under the open source license initiates
+    patent litigation against another party, claiming that the covered
+    work infringes, the initiator automatically loses all the patent
+    grants from others provided for that work via the license, and in
+    the case of the GPL-3.0 loses their right to distribute under the
+    license altogether.
+
+  \item \emph{tivoization}
+
+    ``Tivoization'' (or ``tivo-ization'') refers to the practice of
+    using hardware-enforced digital signatures to prevent modified
+    open source code from running on a device, even when that device
+    natively runs an unmodified version of the code --- a version
+    that, because it is unmodified, can pass the signature
+    check.\footnote{The name comes from TiVo's digital video
+      recorders, which runs the GPLv2-licensed Linux kernel and uses
+      this technique to prevent people from running versions of the
+      kernel other than those approved by TiVo.  See
+      \otsurl{https://en.wikipedia.org/wiki/Tivoization for more.}}
+
+    Most open source licenses permit tivoization, including most of
+    the copyleft licenses and in particular the GPL version 2.
+    However, the GPL version 3 and the AGPL have some limited
+    anti-tivoization measures applicable to consumer and household
+    products.  The effect of these measures on Mozilla software is far
+    beyond the scope of this document.  If tivoization might be
+    relevant to your open source project, we recommend obtaining legal
+    advice as early as possible.
+
+\end{itemize}
+
+\subsubsection{License Compatibility}\label{license-compatibility}
+
+The non-copyleft open source licenses are generally compatible with
+each other, meaning that code under one license can be combined with
+code under another, and the result distributed under either license
+without violating the terms of the other.
+
+However, the copyleft vs non-copyleft distinction can lead to
+\otsfirstterm{license compatibility} issues between a copyleft license
+and other licenses --- sometimes even with respect to a different
+copyleft license.
+
+This report does not include a full discussion of license
+compatibility issues, but such issues should be taken into account
+when starting any new project.  One of the most important questions to
+ask about a new project is what other licenses the project's code will
+need to be able to be combined with.
+
+\subsubsection{License Enforcement and Receiving Contributions}\label{license-enforcement-and-contributors}
+    
+For all open source software --- indeed, for any copyrighted work ---
+the copyright holder is the only entity with standing to enforce the
+license.
+
+For example, in an archetype like Rocket Ship To Mars or Controlled
+Ecosystem, the founder or primary vendor is often the only entity
+holding copyright in the code.  If they release that code under a
+copyleft license, they can ensure that anyone who forks the project or
+distributes a derivative work built on it abides by the license.
+
+The complication, however, is that once a project starts accepting
+code and documentation contributions from others, copyright ownership
+becomes spread out among all those authors unless they sign an
+agreement to transfer copyright to a central owner (which is, for
+various reasons, less and less common a practice).  The exact
+situation for a given project will depend on whether it requests a
+formal contributor agreement from its participants and, if so, what
+kind.  More and more projects are using a very simple kind of
+contributor agreement known as a ``Developer Certificate of Origin''
+(DCO).
+
+This report does not include a in-depth discussion of contributor
+agreements and copyright ownership issues, but
+\otsurl{https://producingoss.com/en/contributor-agreements.html} has more
+information and pointers to further resources.
+
+Note that non-owning parties cannot enforce the license on an owner.
+In other words, if Mozilla releases a project under the AGPL, Mozilla
+itself is not obliged to abide by the terms of the AGPL at least as
+long as Mozilla is the sole copyright holder (though in practice
+Mozilla should conspicuously abide by those terms anyway, of course, for
+strategic reasons that go beyond its formal obligations as licensor).

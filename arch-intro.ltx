@@ -1,0 +1,149 @@
+\numberedsection{Open Source Project Archetypes}\label{archetypes}
+
+% Various points gleaned from trawling the interview notes (many of
+% these are items marked with the string "IMPORTANT" in Karl's notes,
+% some are from James's notes too):
+%
+%   - categorize projects by demographics of devs they tend to attract.
+%     (ref:86783cb5)
+% 
+%   - Aaron Turon of Rust was interested in making some kind of
+%     advisory board that could have organizational memberships, 
+%     both for enterprise-level advice on direction and sponsorship
+%     potential. (ref:8edf2407)
+%
+%   - Re Rust: Companies are very receptive to formalizing and
+%     regularizing their technical contribution activity, but haven't
+%     been given a clear path to do so yet.  "Even without that, there
+%     are companies outside Moz that are funding Rust work, so it's
+%     happening organically, but there are opportunities to do more."
+%     (ref:2df42bbc)
+%     
+%   - Also re scaling to achieve breadth of effect: Ffox "test pilot"
+%     program (ref:f3bff974).  The idea of test-pilot is "if you have
+%     an interesting idea, if you put in a little effort, we'll try to
+%     get it in front of users to try it out".  Again, use Moz's
+%     ability to focus resources to scale community efforts.
+%     
+%   - Usefulness of investing in mentoring.  "We have not found the
+%     point of diminishing returns in mentoring people in open source.
+%     The more we put into it, the more we get.  I am just constantly
+%     bowled over by it." (ref:d01ca77f)
+%     
+%   - Don't hire all the project's best devs. (ref:7e38b8c3) (ref:97bebee8)
+%     
+%   - If there is only one stakeholder (e.g., Moz for Ffox), then it
+%     is inevitable that the important decisions will be made behind
+%     closed doors.  (ref:c580e617)  "There's just a difference
+%     between one organization using your thing and many many
+%     organizations using your thing." (ref:7935cb8d)
+%     
+%   - Key is to have clearly product-minded leadership doing things in a
+%     community-visible way. (ref:7f2f4b17)
+%     
+%   - Cite "avg time to first patch, for what demographic of
+%     contributor" in model evaluations, in our report.  Distinguish
+%     time-to-first-patch from longer time-to-first-landing -- the
+%     difference is the feedback loop, and the nature of that loop 
+%     matters.  (ref:34fdefd5)
+%     
+%   - Having a product-development/product-vision based roadmap makes
+%     partnerships easier.  Hard to partner with someone when their
+%     direction bubbles up from the bottom and you can't predict what
+%     those engineers will come up with.  (ref:2c4f11a7)
+%     
+%   - Need culture of respecting others' motivations, including profit
+%     motivation.  (ref:5f2d8f92)
+%     
+%   - "If I could solve one thing with a snap of the finger, as far as
+%     open source engagement, understanding the different roles
+%     that go into building our porduct & how all of them have to work
+%     together -- b/c most engineers these days have engaged with open
+%     source in some way or another, but the same is not true of a
+%     designer or a UX specialist or a product manager".  Engineers don't
+%     know how to communicate with them, and contributors don't
+%     necessarily even have access to them the same way they have access
+%     to the engineers.  Training, pathway-building, and time allocation
+%     on both sides is necessary.  (ref:f0a57895)
+%     
+%   - Maybe mention how Moz module ownership hierarchy should not
+%     apply to all Moz projects, as it is a blocker to community
+%     buy-in.  (ref:3cacce3d)  They seem to have already decided
+%     this, but good to reinforce it.
+%     
+%   - Importance to A-Frame of being explicit about what model of
+%     control -- what archetype -- the project is using.  [ref:c5a1d8ca]
+%     
+%   - Someone said, tentatively, that Automattic contributes less than
+%     25% of patches to Wordpress right now (ref:8d6590b1).  Yet
+%     Automattic still probably has control.  What projects would
+%     Mozilla like to be in this position with?
+%     
+%   - How will this archetype list get updated, if there is not
+%     healthy information flow of feedback up through the
+%     organization? The eng level may be serving as a filter that
+%     prevents upper management from having visibility into all the
+%     various idiosyncracies of the ways projects are run and how that
+%     affects partners and contributors and ultimately the product itself.
+%     (ref:7bef34ce)
+%     
+%   - Rust should be a pretty clean example of an archetype.  (ref:72121373)
+%     
+%   - Fortress-defense mindset vs building-a-new-city mindset.
+%     Internal inconsistency on which should be the default mindset of the
+%     organization.  The two are incompatible: you have to choose one,
+%     really, or at least articulate how you'll make tradeoffs.  Right now
+%     it's by default fortress-defense, which means the occasional
+%     excursions into building a new city often founder.  (ref:f24704fb)
+%
+%   - The more attractive you want to be to devs, the less process you
+%     can afford to have.  Everyone wants to be a kernel hacker, thus
+%     Linus can impose significant overhead to contributing and not
+%     lose devs -- well, not lose too many anyway.  (ref:b7a0a6a7)
+%     Idea: measure contribution failure: PRs started but not landed,
+%     or started and responded to but not landed.
+
+The archetypes described here are simplified versions of those found
+in the wild.\footnote{There might be some important archetypes that we
+  simply didn't think of.  One of the fastest ways to discover them is
+  to publish a report claiming to list all the archetypes and then
+  wait for the bug reports to roll in; that is our approach here.}
+The list aims for broad coverage: ideally, it should be
+possible to match any real-world open source project to one of these
+archetypes, with some adjustment for circumstances.  Even though certain
+archetypes won't be appropriate for Mozilla to use for the
+projects it launches, Mozilla will still often encounter projects with
+those types --- through engineering collaboration, through
+partnerships, even through purchase --- and being able to discuss how
+best to work with or influence such projects can be useful.  However,
+we will devote less space to archetypes that Mozilla is unlikely to
+ever use itself.
+
+These archetypes are intended to help Mozilla with internal discussions
+as well as with public positioning.  Externally, it is important for Mozilla
+to set clear public expectations about every project it starts.  This
+increases others' faith that Mozilla is a good project host and a good
+partner to work with.
+For example, if Mozilla
+openly declares that a certain project is going to be largely funded by and
+wholly controlled by Mozilla for the next few years, and uses the project's
+archetype in explaining why, then even potential partners who rely on
+that declaration in choosing (for now) not to participate will still
+have had a positive experience with Mozilla.  Their belief that they
+\emph{could} partner with Mozilla on something will be reinforced,
+because Mozilla took care to explain itself and not to waste their
+time. \otsref{(ref:6414cf95)}
+
+It is perfectly fine to launch a project using one archetype while
+stating a plan to switch to another down the road.  We include a brief
+discussion of the evolution of archetypes for this reason.  For
+example, a project may need to be tightly focused in its early stages,
+but plan to change to a more distributed style of leadership and
+decision-making once it attracts a community of diverse interests.
+
+Each of these archetypes is presented with a brief description of its
+key characteristics, including how the sponsoring organization could
+best benefit from it.  Usually this is followed by an example or two
+described in some detail, followed by key points on licensing,
+co-development, and community, and how tightly any components of the
+project are related.

@@ -1,0 +1,222 @@
+\numberedsection{Benefits of Open Source}\label{benefits-of-open-source}
+
+In order to decide which particular benefits of open source to
+optimize for, it helps to survey the reasons a project is open source
+in the first place.  Below is a checklist of high-level benefits that
+being open source can bring; most projects will be motivated by some
+subset of this list.  Knowing which benefits are most important for a
+given project, and their relative priority, will help identify which
+archetype from section \fullref{archetypes} would best serve that
+project's goals.
+
+Note that this list of benefits is oriented toward organizations.
+There will always be individuals who make a personal decision to open
+source their code; their motivations may include some of the ones
+below, but may also include personal gratification or philosophy, or
+even sheer habit.  For this report, we focus on organizational and
+mission benefits that would be relevant to Mozilla.
+
+Open source can be used to:
+
+\begin{itemize}
+  \item \emph{Lead a standardization effort in a particular area.}
+
+    For this purpose, widespread adoption usually takes precedence
+    over building a robust contributor ecosystem, at least initially.
+    Licensing that is compatible with being used in proprietary
+    systems may also be important, which would imply a non-copyleft
+    license (see \fullref{appdx-licensing-basics}).
+
+  \item \emph{Improve product quality.}
+
+    This works most effectively in archetypes that have a dedicated
+    core team that prioritizes involvement from outside developers.
+    The core team acts as a ``quality ratchet'', filtering the best
+    ideas from the broad developer pool into the project, ensuring
+    that those ideas get implemented and stay implemented (often the
+    core team devotes proportionally more time to QA and test suite
+    improvements than other developers do), and actively encouraging
+    continued participation so that more total development energy is
+    sustained in the project than the core team could ever muster on
+    its own.
+
+  \item \emph{Amplify or expand developer base.}
+
+    Like many organizations, Mozilla is sometimes in the position of
+    wanting to build something and knowing that they cannot build it
+    alone.  Open source sends a strong signal that Mozilla is seeking
+    like-minded collaborators, and provides a framework for
+    collaboration once they've been found.
+
+    Which archetypes best suit this goal depends on the nature of the
+    project, but in general they will be archetypes that tend to
+    invest more up-front effort in making the project welcoming and
+    easy for others to gain influence in (as opposed to archetypes
+    that optimize for reaching a minimum viable product early with
+    internal resources, or that optimize for maintaining Mozilla
+    control over the long term).
+
+  \item \emph{Increase the size or quality of your organization's
+    developer hiring pool.}
+
+    Open source engagement puts an organization in much greater
+    contact with potential hires who have expertise in technology the
+    organization values.  It also creates a public portfolio of a
+    potential hire's work.  This includes not just their code commits
+    but also their communication patterns, collaboration style, and
+    personality.  This increased window on a candidate's abilities
+    provides a significant amount of information relevant to
+    identifying candidates and deciding to hire them.
+  
+  \item \emph{Improve internal developer morale.}
+
+    Developers want to participate in open source.  All of the factors
+    that bring outside developers into a hiring organization's view also
+    make their own developers visible to other firms.  Open source
+    allows developers to build a public portfolio and expertise in
+    widely-used technology (as opposed to expertise in a proprietary
+    codebase, which doesn't travel very well).  The best developers
+    increasingly demand the ability to display their skills in public
+    ways that create future opportunities.  Open source does that in
+    ways proprietary pursuits simply cannot.
+
+    How this affects retention depends on the organization.  Here
+    Mozilla has an advantage thanks to its mission-driven nature:
+    Mozilla is better able to keep good developers once hired than the
+    typical tech company is, because Mozilla offers significant
+    non-monetary job satisfaction.  But the same is true, if to a
+    lesser degree, at any organization that offers a good workplace
+    for developers.  Thus open source activity offers a relatively
+    \emph{greater} benefit to organizations that are already good
+    places to work: it reminds developers of their market value, which
+    in turn contributes to healthy morale and makes the developers'
+    current position remain attractive.
+
+    Open source involvement also allows a developer to exercise a more
+    varied set of skills and interact with a wider group of people.
+    The morale benefit of expanding a job role in this way can be
+    significant.
+    
+  \item \emph{Improve internal collaboration within one's own organization.}
+
+    Effective open source is all about removing collaboration
+    barriers.  Often people think of those barriers as occurring at
+    entity boundaries, but large organizations usually have a variety
+    of internal boundaries as well.  Adopting structures that
+    encourage inter-team collaboration tends to increase it regardless
+    of whether the two teams reside at different companies or simply
+    different business units.
+    
+  \item \emph{Establish a basis for product reputation.}
+
+    For some people and organizations, a product's being open source
+    is a significant factor in adoption decisions.
+
+  \item \emph{Establish a basis for organizational brand and credibility.}
+
+    Above the level of the individual project, hosting a collection of
+    well-run open source projects can attract partner interest and
+    media interest, and in certain circumstances increase political
+    influence.
+
+  \item \emph{Improve market acceptance by eliminating customers' \&
+    partners' exposure to the risks inherent in proprietary
+    approaches.}
+
+    This benefit views open source as a form of insurance, similar to
+    code escrow.  But in addition to the escrow of the code itself,
+    the continued investment of other contributors is in a sense
+    escrowed as well, and is in principle available to be retargeted
+    should Mozilla ever decide to shift resources away from the project.
+
+    Breadth of developer base --- and in particular diversity among the
+    different organizations who supply participating developers --- is
+    part of that insurance.  Aside from raising the
+    project's own
+    bus-factor\footnote{\otsurl{https://en.wikipedia.org/wiki/Bus\_factor}},
+    broad contributorship means that third parties will have more
+    routes by which to procure support when they need it.
+
+    Thus, for this benefit to be fully realized, it is often best to
+    choose an archetype that invests in building a broad developer
+    base in which Mozilla is just one of many participants, or at most
+    ``first among equals''.  Note that this may be in tension with
+    archetypes that are more optimized for making rapid technical
+    progress.  If Mozilla dictates direction and provides the majority
+    of the driving energy in the project, potential adopters will
+    realize that and take into account the risk to the project of
+    Mozilla changing its investment level down the road.
+
+  \item \emph{Stop someone else from establishing early dominance in an
+    particular area.}
+
+    Because open source can spread so quickly, often assisted by
+    third-party developers and packagers, a timely release can
+    sometimes gain a significant share of a particular user base
+    against a more slowly-distributed proprietary alternative --- even
+    when that alternative is initially ahead in terms of
+    features or user experience.
+
+  \item \emph{Engage with users.}
+
+    Open source can be a very effective way to learn who is using the
+    software, how they are using it, and to draw some of them into
+    closer participation and contribution.  How much these benefits
+    are available depends a great deal on the nature of the software
+    and the demographics of its user base (e.g., there's a reason why
+    so many contributions to TeX and LaTeX are from graduate students in
+    technical fields), but some archetypes are better suited to broad
+    user engagement than others.
+
+    For example, a project can put extra effort into making it easy
+    for non-technical users to report bugs or have conversations with
+    support staff and even with developers.  This wouldn't necessarily
+    be a good use of resources for all projects, but it could be for a
+    project that prioritizes user engagement, or prioritizes
+    conversion of individual users (as opposed to
+    organizationally-motivated users) into contributors.
+
+    In general, the larger the audience for a given piece of software,
+    the less likely it is that the users who engage with it as an open
+    source project will be representative of the user base as a whole.
+    However, the slope of this curve can be influenced by choice of
+    archetype.
+
+  \item \emph{Provide a framework for collaborating with partners.}
+
+    When a project is not open source, bringing partners in as
+    participants often involves cumbersome overhead: negotiating MOUs,
+    signing NDAs, etc.  On the other hand, when the project is open
+    source, then organizational partners can just participate using
+    the same structures as everyone else, and Mozilla still has the
+    option to grant preferential attention or priority to the partners
+    as needed.  Of course, this works best in a project archetype
+    where the governance and prioritization mechanisms do not impose
+    constraints that would prevent Mozilla from acting on such
+    preferences.
+
+  \item \emph{Provide transparency to customers \& partners.}
+
+    Sometimes source code transparency --- which is always guaranteed
+    by open source --- is enough.  But sometimes \emph{process}
+    transparency is desirable as well.  For example, a partner may
+    want to see that their competitors' needs aren't being unduly
+    favored.  Process transparency provides reassurance by showing the
+    partner how they too can influence the roadmap of the project to
+    satisfy their needs.\footnote{Some common ways to gain such
+      influence in an open source project are to invest more time from
+      current developers, or in some cases to hire a person who is
+      already influential in the project.}
+
+  \item \emph{Increase insight into partners' (or competitors')
+    strategy and goals.}
+
+    One can extrapolate information about partners and competitors
+    from how their representatives behave in an open source
+    project.  This is most effective when not just developers but
+    their managers observe the open source project closely; managers
+    may also have a better sense of market context and thus be able to
+    infer more information than developers could from observing
+    external participants' behavior.
+
+\end{itemize}

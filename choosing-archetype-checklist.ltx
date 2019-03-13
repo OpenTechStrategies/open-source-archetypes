@@ -1,0 +1,221 @@
+\numberedsection{Choosing An Archetype: Practical Questions}\label{practical-questions}
+
+This section presents a checklist of practical questions that can
+either confirm a choice of archetype or, perhaps, help draw out latent
+disagreements about what archetype is best for a given project at a
+particular stage in its development.
+
+We emphasize again the baseline definition:
+
+\begin{quote}
+A software project is \emph{open source} if its code is distributed
+under an OSI- and FSF-approved license to parties who could use and
+redistribute the code under that license.
+\end{quote}
+
+That's all that is absolutely necessary for open source.  Everything
+else is a matter of choice --- and thus a matter of potential
+variation across archetypes.
+
+For example, a core development team is not required to review or
+accept code contributions from outside developers.  The core team
+might \emph{choose} to engage with outside contributions because it is
+advantageous to do so, but that is independent of the question of
+whether the project is open source.  Similarly, it is not necessary to
+give users or contributors any voice in project governance --- that
+is, governance of the particular master copy from which your
+organization cuts releases --- but it might under some circumstances
+be a good idea to give them that voice.
+
+\subsection{Questions to Consider}\label{per-project-questions}
+
+\begin{itemize}
+
+  \item {\bf How many separable open source pieces are there?}
+  
+    For many organizations, there is a strategic question of how much
+    to open source for each product.  This question is easier at
+    Mozilla than it is at most other places, since Mozilla has one of
+    the most aggressive policies of open sourcing its software in the
+    industry\footnote{\otsurl{https://www.mozilla.org/en-US/foundation/licensing/}}.
+
+    But there is still the possibility that different parts of what
+    looked initially like one project might be better run as separate
+    projects, perhaps using different archetypes.  
+
+    For example, one could imagine a project where the client-side
+    code is developed with heavy community involvement and a
+    multi-organizational governance process, while the server-side
+    (perhaps primarily deployed as a single centralized service by
+    Mozilla or its partners) is run in a much more dictatorial way,
+    with outside contribution limited mainly to requests for APIs.
+    Even among modules within the same high level component, it can
+    sometimes make sense to use different archetypes: core
+    cryptographic code, for example, may need different governance and
+    receptivity to contribution than user interface code does.
+
+    Additionally, there may be questions about how to release the
+    non-code parts of a project.  Documentation, the project website,
+    and media assets can all be released under open source
+    licenses\footnote{We may consider the Creative Commons
+      Attribution, Attribution-ShareAlike, and CC0 licenses to be open
+      source licenses for these kinds of assets.}.
+    Trademarks too can be approached in ways that are compatible with
+    certain kinds of use by the broader open source community,
+    including commercial use.  These assets merit separate
+    consideration even when the code itself is to be run as one
+    project.
+    
+    % Karl had thought about including this sentence in the above
+    % paragraph...
+    % 
+    %   "A licensor of code may also hold patents relevant to that
+    %    code, and, depending on the open source license used for the
+    %    code, may want to consider some kind of explicit patent
+    %    grant, in order to foster adoption."
+    % 
+    % ...but then decided against, on the notion that in practice
+    % that's actually a pretty rare move, because patent concerns are
+    % more commonly handled through the open source license.
+    % James later said: "I'm ok with that sentence, milquetoast as it
+    % is.  Very few patented entities really do this, though."  This
+    % convinces Karl that not including it was the best course.
+
+  \item {\bf Who is expected to participate in the project, and why?}
+
+    In this context, ``participate'' means to contribute effort
+    directly to the project in a way that results in tangible
+    improvements to the final, shipped product.
+    
+    \begin{itemize}
+      \item Individually motivated developers?
+
+        Is the project optimizing for low-investment (``drive-by'' or
+        ``one-off'') contributors, or more for high-investment
+        developers who will have a sustained presence?  How broad or
+        narrow is the product's audience?  Do developers need unusual
+        skills and knowledge to participate?
+
+      \item What about documenters?  Testers?  Translators?  UX
+        experts?  Security reviewers?  Domain experts specific to the
+        software's areas of applicability?
+
+      \item Organizational participation?
+
+        While organizations often participate indirectly via their
+        developers, some also participate at a higher organizational
+        level with more explicit executive buy-in.  Projects that
+        intend to have organizational participation often use an
+        archetype that is compatible with governance structures
+        designed for organizational participation.
+
+      \item Is the user base expected to be the primary pool for the
+        contributor base?
+
+      \item Who will use this?  Is it aimed at a commercial sector?
+        Is it infrastructure?  What else already exists in that
+        sector, and what are their sustainability approaches?
+
+    \end{itemize}
+  
+  \item {\bf How is the code expected to be deployed?}
+  
+    The way(s) in which a product is deployed can affect what modes of
+    open source production will be best for that project.  For example,
+    optimizing for broad developer participation in a project that is
+    expected to have essentially one deployed instance would usually
+    not make sense, except in special circumstances.
+
+    \begin{itemize}
+      \item Client-side deployment for each user?
+      \item Web application?  Back end application with rich APIs?
+      \item Broad cloud deployment on the public Internet?
+      \item Enterprise-driven behind-the-firewall (BTF) deployment?
+      \item A small number of relatively high-investment cloud instances?
+      \item Just one main cloud instance (single-entity SaaS or PaaS)?
+    \end{itemize}
+  
+  \item {\bf How is the project managed and governed?}
+  
+    \begin{itemize}
+      \item Does the founding organization (which may or may not be
+        Mozilla) want to maintain tight control?
+      \item Where does Mozilla want this project to be on the
+        tradeoff between focused roadmap and iterative
+        consensus-building?
+      \item Informal versus formal organizational participation?
+      \item What level of risk of third-party forks is acceptable?
+      \item Is the project primarily developer-driven, or is it driven
+        by a product vision extrinsic to the core developers?
+    \end{itemize}
+    % Some examples of these contrasts:  Rust (Mozilla et al),
+    % Firefox, GeoNode,  Arches,  Android,  Apache, LibreOffice.
+  
+  \item {\bf What is the project's business model or sustainability model?}
+  
+    Not all projects necessarily have a sustainability model at first,
+    but it is worth asking this question and thinking about how it
+    might affect, or be affected by, choice of archetype.  For
+    example, a project whose long-term future depends on deep
+    investment from a few key industry partners might do better to aim
+    for B2B or Multi-Vendor Infrastructure than for (say) Mass Market.
+  
+  \item {\bf Which open source license does it use?}
+  
+    See \fullref{appdx-licensing-basics} for more on this topic.
+
+    \begin{itemize}
+      \item Main question: how much copyleft is appropriate?  None,
+        some, or as much as possible?
+
+        \begin{itemize}
+          \item For some situations: ``weak copyleft'' (e.g., the
+            Mozilla Public License (MPL), or the LGPL).
+            
+            So-called ``weak copyleft'' is used by software libraries to
+            preserve copyleft for the original library, while not
+            enforcing copyleft on co-distributed code that uses the
+            library but is not actually part of the library.
+            
+          \item For some situations: on-contact copyleft (e.g., AGPL).
+            
+            In this choice, copyleft provisions travel with
+            distribution, and ``distribution'' is defined by the
+            license to include even making use of the software via a
+            network connection.
+        \end{itemize}
+
+      \item Does the project involve any trademarks?  If so, a
+        separate trademark policy may be necessary in addition to the
+        open source license.  Trademarks operate quite differently in
+        open source ecosystems, and the considerations in this area
+        can be especially tricky.
+
+      \item Is the project operating in a heavily patented area?  If
+        so, a license with patent provisions may be advisable (see the
+        discussion of ``patent snapback'' in
+        \fullref{licenses-variation}).
+
+      \item What level of formality will be used for accepting
+        incoming contributions?  (E.g., CA, CLA, or DCO.  See the
+        discussion of contributor agreements in
+        \fullref{license-enforcement-and-contributors}.)
+    \end{itemize}
+  
+  \item {\bf Does technical architecture match social structure?}
+  
+    Technical architecture can have effects on governance, licensing,
+    and overall project/community ecosystem.
+  
+    \begin{itemize}
+      \item Is the project module-based with APIs, or is it a
+        microservice architecture?
+      \item Does the project involve a run-time extension language?
+      \item Will the project encourage a semi-independent plugin ecosystem?
+      \item Do the project's choice of programming language(s) and
+        dependencies match the intended archetype?
+      \item Are the project's collaboration tools and processes
+        configured to match the intended archetype?
+    \end{itemize}
+
+\end{itemize}

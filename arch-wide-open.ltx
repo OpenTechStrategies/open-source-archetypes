@@ -1,0 +1,100 @@
+\subsection{Wide Open}\label{archetype:wide-open}
+
+{\bf Examples\footnote{In some ways the Linux kernel project could
+  be considered ``Wide Open''.  However, both technically and
+  culturally, Linux kernel development is \foreignphrase{sui generis}
+  and we have deliberately avoided using it as the basis for any
+  archetype.}:} \emph{Rust (present day), Apache HTTPD}
+
+{\bf Characteristics:} Wide Open projects actively welcome contributions
+from any source, and tend to get contributions at all levels: from
+individual developers providing one-off bug fixes to sustained
+organizational contributors developing major features and being
+involved in long-range project planning.  
+
+A Wide Open project values investing in contributors relatively
+highly: the core development team is generally willing to pay a high
+opportunity cost (in terms of code not written or bugs not fixed) in
+order to encourage or onboard a promising new contributor.  The
+project's collaboration tools and processes reflect this
+prioritization.  For example, the experienced developers in the
+project will still take the time to hold design discussions in
+forums-of-record --- even when many of the individuals concerned are
+co-located and could make the decisions in person --- in order to
+publicly reinforce the possibility of participation by any other
+self-nominated interested party.
+
+Wide Open is a good archetype for projects that aim to serve the same
+technical purpose over a long period of time, and for which stability
+and reliability are more important than rapid development of the code
+base or fast adoption of field-specific innovations.  Wide Open is
+also especially effective when some significant percentage of the user
+base is technically oriented (and thus susceptible to being converted
+to contributors), and when regular contact with a broad developer base
+is likely to bring real-world usage information that would be
+difficult for Mozilla to acquire in any other way.
+
+Wide Open projects should expect the majority of contributors to be
+only lightly involved --- making the occasional small-scale
+contribution here and there, but not investing heavily in the project.
+A much smaller number of contributors will participate with higher
+degrees of intensity.  Contributors tend to cycle in and out of these
+groups over time, and one of the strengths of the Wide Open archetype
+is that it makes it easy (from the contributors' point of view) for
+that cycling to happen, because the project as a whole is willing to
+sustain the overhead of maintaining permanent ``on-ramps'' to greater
+involvement.
+
+In general, Wide Open projects usually settle on multi-party
+governance in some roughly democratic form.  This is because when
+there are many contributors, some of them will expect to be able to
+climb the influence ladder by investing time and making quality
+contributions.  Even for those who don't seek that climb, the
+knowledge that it's available -- i.e., that past investment could, at
+some future point, be retroactively incorporated into a larger
+strategy of influence -- is part of what makes working in a Wide Open
+project appealing.
+
+It is still possible for a single organization to retain significant
+and possibly decisive influence in a Wide Open project.  The typical
+way to do so is to invest the most developer time.  However, when an
+organization chooses that course, it must then be especially careful
+not to demotivate others by accidentally quashing their ability ---
+real or perceived --- to achieve influence.  Simply declaring a
+project ``Wide Open'' and being receptive to contributions is not
+enough; ultimately, Wide Open projects work best when they are visibly
+influenceable by input from multiple sources, although one
+organization may be ``first among equals'' and remain able to exercise
+leadership in major decisions.
+
+% This would be a good place to mention the ``eager consensus'' (as
+% opposed to ``lazy consensus'') model example given in interview
+% (ref:f18b6d4d).
+% 
+% Eager consensus involves an explicit RFC for every major decision
+% (ref:39a08980); the ``no new rationales'' rule (ref:1a5cc116) is an
+% interesting innovation.
+% 
+% Eager consensus unlocks potential for people to make contributions
+% w/o having technical expertise.  If you want input from demographics
+% where ``show us the patch'' would be a stopper, this is important.
+% It's applicable beyond Rust: it can allow Mozilla to use open source
+% to scale to the breadth of effect Mozilla wants.  (ref:a7a9fcd6)
+
+\begin{itemize}
+\item {\bf Licensing}: Can be copyleft or non-copyleft.
+\item {\bf Community standards}: Very welcoming to contributors, to
+  the point of having formalized systems for onboarding newcomers.
+\item {\bf Component coupling}: This archetype applies to many
+  technically different projects, so the component organization could go
+  any number of ways.
+\item {\bf Main benefits}: Enables large-scale collaboration.  
+  Community can become self-sustaining, which allows the original
+  sponsoring organization some flexibility in deciding how involved to
+  stay.
+\item {\bf Typical governance}: Group-based and more or less
+  democratic.  In practice, most decisions are made by consensus, but
+  voting is available as a fallback when consensus cannot be reached.
+  There is usually a formal committer group to approve contributions
+  and anoint new committers.
+\end{itemize}
