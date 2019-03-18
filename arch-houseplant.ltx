@@ -13,55 +13,58 @@ need\footnote{The classic phrase is that such a project starts by
 because that's the appropriate size for what the project does.
 
 This is probably the most well-known and widely written-about type of
-open source project, probably because it is the ``stable evolutionary
-state'' for much of open source.  Vast numbers of such projects are
-started, since they're so easy for one person to start --- you don't
-have to coordinate with anyone else.  Even though only a small
-percentage of them will gain much adoption, that percentage still
-accounts for a large proportion of distinct open source projects
-total.  Many such projects then stay under the single founder's
-stewardship because there's no technical need for the project to grow
+open source project, because it is the quickest ``stable evolutionary
+state'' to reach in open source.  Vast numbers of houseplant projects
+are started, since they're so easy for one person to start --- you
+don't have to coordinate with anyone else.  Even though only a small
+percentage of them gain much adoption, that percentage still accounts
+for a large proportion of distinct open source projects total.  Many
+such projects stay under the single founder's stewardship for a long
+time, because there's no technical need for the project to grow
 significantly in complexity or capabilities.
 
-A Single-Maintainer Houseplant is highly likely to transition to
-another archetype if it succeeds in gaining widespread adoption.  Even
-if its niche is so small and well-bounded that adoption does not imply
-feature growth, the growth rate for incoming bug reports and related
-inquiries may still overwhelm the maintainer.  This is because the
-rate at which a piece of software receives bug reports is mostly
-proportional to the size of its user base, not to the size/complexity
-of the software nor even to number of actual bugs in the code.
+A Single-Maintainer Houseplant is most likely to transition to another
+archetype when it succeeds in gaining widespread adoption.  Even if
+its niche is well-defined enough that adoption does not necessarily
+imply feature growth, the increased rate of incoming bug reports and
+related inquiries may still overwhelm the maintainer.\footnote{The
+  burden experienced by unfunded or underfunded individual maintainers
+  of widely-used open source code is one of the threads running
+  through Nadia Eghbal's influential 2016 report \emph{Roads and
+    Bridges: The Unseen Labor Behind Our Digital Infrastructure}
+  (\otsurl{https://www.fordfoundation.org/about/library/reports-and-studies/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure})
+  and the followup discussion it spurred.  The report's topic is
+  broader than just single-maintainer projects, however.} This is
+because the rate at which a piece of software receives bug reports is
+mostly proportional to the size of its user base, not to the size and
+complexity of the software nor even to number of actual bugs in the
+code.
 % https://www.rants.org/2010/01/bugs-users-and-tech-debt/, but I'm not
 % sure it's worth a visible citation.  Though now that I reread the
 % post, I'm retrospectively pretty pleased with it, so maybe we should
 % cite it?  I dunno.  Other, more objective opinions welcome :-).
 
-TODO (working here): Discuss maintainer burnout via DDoS in more depth
-here --- it's a big topic in open source and this is the right place
-to address it in this document.  Citation of of @nayafia's work would
-be good here.  (May also worth mentioning about how this archetype is
-the one most often unconsciously conflated with open source in
-general, at least judging from some of the quicker / more off-the-cuff
-reactions to @nayafia's writings.)  To the extent that there is a
-community, it is loose and forms a ``star topology'' around the single
-maintainer: most communication is from contributor to maintainer and
-back, with relatively fewer inter-contributor discussions than in
+To the extent that a Single-Maintainer Houseplant project has a
+community, it is usually a loose community that forms a ``star
+topology''\footnote{\otsurl{https://en.wikipedia.org/w/index.php?title=Star\_network}}
+with the single maintainer as hub.  Most communication is between a
+given contributor and the maintainer --- albeit still visible to all
+--- with relatively fewer inter-contributor discussions than happen in
 other archetypes.
 
-% I wonder if this note should come earlier in the section.
 This archetype often overlaps with Upstream Dependency
 (\ref{archetype:upstream-dependency}), as many dependencies also
 happen to be small, single-maintainer packages.
 
 \begin{itemize}
-\item {\bf Licensing}: Can be copyleft or non-copyleft (tends to be
+\item {\bf Licensing}: Can be copyleft or non-copyleft (but more often
   the latter when also an Upstream Dependency).
 \item {\bf Community standards}: Entirely dependent on the personality
   of the single maintainer.  We have seen a wide range of community
-  standards in this archetype, from almost aggressive non-engagement
-  to welcoming and responsive.  Even in the latter case, however,
-  broad adoption of the software can strain the single maintainer's
-  time and attention.
+  standards in this archetype, from welcoming and responsive to almost
+  aggressive non-engagement.  Even in when the maintainer is by nature
+  welcoming, however, broad adoption of the software can strain a
+  single maintainer's time and attention.
 \item {\bf Component coupling}: Little to none.  It is one component.
 \item {\bf Main benefits}: Easy to start; easy make decisions in.
 \item {\bf Typical governance}: Benevolent dictatorship by founder.
