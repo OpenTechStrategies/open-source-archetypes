@@ -12,11 +12,11 @@
 ### ${OTS_DOCTOOLS_DIR}/Makefile.  Therefore, please try not to make
 ### changes here; instead, put any improvements in the other Makefile.
 
-.PHONY: all check
+.PHONY: default check
 
 # The order of the rules below is important; change only with care.
 
-all: check
+default: check
 	@make -s -f ${OTS_DOCTOOLS_DIR}/Makefile
 
 %: check
