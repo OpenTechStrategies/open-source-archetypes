@@ -1,13 +1,6 @@
-% TBD: Using \unnumberedsection here for now (instead of \appdxsection
-% and then \appdxsub... within) because appendix numbering is broken:
-% both appendices got called "Appendix J".
-% 
-% I suspect this bug is due to the fact that we use a mixture of
-% \unnumberedsection and \numberedsection for the sections that come
-% before the appendices.  This suspicion is furthered by the following
-% facts: "J" is the 10th letter of the alphabet and there were exactly
-% 10 numbered sections when this bug manifested itself with "J"; and
-% when there were 9 numbered sections, both appendices got called "I".
+% Using \unnumberedsection here for now (instead of \appdxsection and
+% then \appdxsub... within) because appendix numbering seems to be
+% broken when we use \unnumberedsection for all the previous sections.
 \unnumberedsection{Appendix A: Basics of Open Source Licensing}\label{appdx-licensing-basics}
 
 Although many Mozillians have a great deal of familiarity with the
