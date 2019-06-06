@@ -1,0 +1,138 @@
+\unnumberedsection{Ecosystem Mapping}\label{ecosystem-mapping}
+
+``Ecosystem mapping'' is a technique for building a shared
+understanding of how an open source project's stakeholders affect the
+project.
+
+An ecosystem map is lightweight, messy, and quick, and ideally redone
+regularly (because a healthy ecosystem is never static).  The best way
+to make one is to hand-draw it on a large piece of paper or on a
+whiteboard, as a group exercise.  We recommend starting with
+\emph{who} and going from there to \emph{what}, considering at least
+these elements:
+
+\begin{itemize}
+  \item \emph{Users (a.k.a. ``end users'')}
+  \item \emph{Contributors}
+  \item \emph{Service Providers / Support Providers}
+  \item \emph{Partner Organizations (e.g., co-investors or funders)}
+  \item \emph{Instances (i.e., production deployments)}
+  \item \emph{Competing or Adjacent Projects (open source or proprietary)}
+\end{itemize}
+
+
+Figure~\ref{fig:example-ecosystem-map} shows a simplified real-life
+example.  It is based on an actual map drawn for the Arches Project
+(\otsurl{archesproject.org})\footnote{Some background will help:
+  Arches is an open source platform for managing cultural heritage
+  data, started by two sponsors, the Getty Conservation Institute and
+  the World Monuments Fund.  It quickly grew to involve a number of
+  different participants.  Some of them are cultural heritage
+  organizations (e.g., Historic England) that both contribute to
+  Arches development and deploy instances of Arches themselves.
+  Others are commercial service providers who deploy Arches on behalf
+  of customers.  Still others represent deployments (and thus
+  indirectly those deployments' users) by influencing the project
+  through feedback in the project's forums and participation in user
+  workshops, conferences, etc, more than through direct code
+  contribution.  Full disclosure: the Getty Conservation Institute is
+  an OTS client, and we have advised the Arches project since its
+  inception.}.  The version shown here is deliberately reduced to just
+a few entities, so it will fit on a page; the real map is much larger
+and more complex.
+
+% See ../../../examples/example-ecosystem-map-README.txt for how to
+% update this ecosystem map.
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.7]{images/example-ecosystem-map.png}
+\caption{\em Example ecosystem map: a simplified and abridged
+  representation of the Arches Project ecosystem.}
+\title{fish}
+\label{fig:example-ecosystem-map}
+\end{center}
+\end{figure}
+
+Depending on the needs of your project and its archetype, you can
+tweak how you draw the map:
+
+\begin{itemize}
+
+  \item You could use shapes of varying sizes to differentiate between
+    larger and smaller organizations (which could mean larger or
+    smaller in absolute terms, or in terms of the entity's degree of
+    involvement in the project).
+
+  \item The key categorizations (``Contributor'',
+  ``Instance/Deployment'', etc) may be different for your project.
+  The ones offered here are just suggestions, though they are ones we
+  have found work decently well across many projects.
+
+  \item You might draw lines of communication or cooperation between
+  different nodes, and those lines could use different styles or
+  colors to represent different types of connections.
+
+  Seeing the relationships and dependencies between different entities
+  in the ecosystem can be just as important as categorizing the
+  entities.  When depicting major vendors and significant clients, for
+  example, you could draw lines to indicate who is servicing which
+  vendors in which markets and niches.  (We didn't include such lines
+  here only because it would have cluttered up the example diagram too
+  much.)
+
+  \item This example map happens to show geographic regions, because
+  they were important for that particular project, but not all
+  ecosystem maps need do so.  Other groupings might be more useful for
+  other purposes --- for example grouping by application domain, or
+  linguistically rather than geographically.
+\end{itemize}
+
+Sketch the diagram as a whole first, being as inclusive as possible,
+and then look for patterns.  For example, if you notice that entities
+of a particular type -- say, small companies, or entities located in a
+particular geographic region -- offer service and support but are
+\emph{not} contributors, that raises the question of whether the
+project could do more to help them become contributors.  If there are
+many such entities and they share a linguistic background, that could
+signal that the project should consider investing in translating its
+documentation into that language, or even hiring developers who know
+that language.\footnote{It might also be a good idea to look to see if
+  those entities have already created their own language-specific
+  forum in which they discuss the open source project --- in other
+  words, your open source project may have grown without your knowing
+  it yet.  In such cases, the value of investing in some bilingual
+  developers or translators to help bring the two groups closer
+  together is greater.  OTS's report ``OpenDRI and GeoNode: A Case Study
+  On Institutional Investments In Open Source''
+  (\otsurl{https://opendri.org/wp-content/uploads/2017/03/OpenDRI-and-GeoNode-a-Case-Study-on-Institutional-Investments-in-Open-Source.pdf})
+  talks more about the importance of inter-lingual connection in open
+  source (p. 37).}
+
+An ecosystem map is usually tuned to a specific purpose.  For example,
+the map in Figure~\ref{fig:example-ecosystem-map} was drawn mainly to
+help understand \emph{who} the participants in that ecosystem are and
+what their motivations are.  By contrast, the map shown in
+Figure~\ref{fig:tor-ecosystem-map} was drawn more to clarify the flow
+of information within the Tor project.  It does not list external
+collaborators or deployments individually, nor show geographical
+regions.  Its value lies in giving collaborators an overview of all
+the interest groups around the Tor project and how they relate to one
+another, by showing which ones are ``nearer'' and ``farther'' from
+each other in terms of communications and concerns.  I.e., it's a
+quick way to help someone answer the question ``Have I thought of
+every type of participant who might care about what I'm proposing?''
+
+It is not unusual to make several different maps of the same ecosystem
+in an afternoon, each map emphasizing a different view.  Don't try to
+cram everything onto one map: the result will be too confusing to look
+at.  Just make several maps.  In a fast-moving project, the terrain
+will shift often; ecosystem maps should be made quickly and used
+immediately.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.3]{images/tor-ecosystem-map.jpg}
+\caption{\em Sample ecosystem map for the Tor project.}
+\label{fig:tor-ecosystem-map}
+\end{center}
+\end{figure}
