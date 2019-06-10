@@ -4,6 +4,7 @@
 %\usepackage[none]{hyphenat}
 
 \usepackage{ots} 
+\usepackage{ots-sectioning}
 \usepackage{amsmath}
 \usepackage{setspace}  % to control TOC spacing
 
@@ -90,82 +91,6 @@
 \definecolor{dkergreen}{RGB}{0, 100, 0}
 \DeclareFixedFont{\viiisf}{OT1}{cmss}{m}{n}{8}
 \newcommand{\circlesep}{\raisebox{1.7em}{\hspace{1.8em}\includegraphics[clip, trim=0cm 11cm 19.3cm 11cm, scale=0.05]{otslogo.pdf}\hspace{1.8em}}}
-
-% Use these (instead of \section) to make a top-level section for
-% which numbering is on or off, respectively.  For most of the
-% sections, numbering should be on, but for a few it should be off.
-%
-% For appendices, use \appdxsection.  For Appendix sub and subsubs,
-% use appdxsubsection and appdxsubsubsection.
-\newcommand{\unnumberedsection}[1]{%
-  % \newpage
-  \setcounter{secnumdepth}{-1}\section{#1}}
-\newcommand{\numberedsection}[1]{%
-  % \newpage
-  \setcounter{secnumdepth}{3}\section{#1}}
-
-\newcommand{\appdxsection}[1]{%
-  % Save existing section format
-  \let\oldthesection\thesection
-
-  % Create a subsection line in the doc and establish the name of the
-  % section for label purposes, but don't put it in the TOC
-  \renewcommand{\thesection}{Appendix \Alph{section}}
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-  \hypersetup{bookmarksdepth=0}
-  \section{#1}
-  \hypersetup{bookmarksdepth=4}
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
-
-  % Manually make a line for the TOC without the "Appendix" bit in
-  \addcontentsline{toc}{section}{\hspace{0.2em}\thesection\hspace{0.5em}#1}
-  %\addcontentsline{toc}{subsubsection}{\parbox{0.45in}{\hfill\thesubsubsection}\hspace{1em}#1\Dotfill\hspace{0.35em}}
-
-  % Restore normal section format
-  \let\thesection\oldthesection
-}
-
-\newcommand{\appdxsubsection}[1]{%
-  % Save existing section format
-  \let\oldthesection\thesection
-
-  % Create a subsection line in the doc and establish the name of the
-  % section for label purposes, but don't put it in the TOC
-  \renewcommand{\thesection}{Appendix \Alph{section}}
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-  \hypersetup{bookmarksdepth=0}
-  \subsection{#1}
-  \hypersetup{bookmarksdepth=4}
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
-
-  % Manually make a line for the TOC without the "Appendix" bit in
-  \renewcommand{\thesection}{\Alph{section}}
-  \addcontentsline{toc}{subsection}{\thesubsection\hspace{0.5em}#1}
-
-  % Restore normal section format
-  \let\thesection\oldthesection
-}
-\newcommand{\appdxsubsubsection}[1]{%
-  % Save existing section format
-  \let\oldthesection\thesection
-
-  % Create a subsection line in the doc and establish the name of the
-  % section for label purposes, but don't put it in the TOC
-  \renewcommand{\thesection}{Appendix \Alph{section}}
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-  \hypersetup{bookmarksdepth=0}
-  \subsubsection{#1}
-  \hypersetup{bookmarksdepth=4}
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{4}}
-
-  % Manually make a line for the TOC without the "Appendix" bit in
-  \renewcommand{\thesection}{\Alph{section}}
-  \addcontentsline{toc}{subsubsection}{\hspace{0.2em}\thesubsubsection\hspace{0.5em}#1}
-  %\addcontentsline{toc}{subsubsection}{\parbox{0.45in}{\hfill\thesubsubsection}\hspace{1em}#1\Dotfill\hspace{0.35em}}
-
-  % Restore normal section format
-  \let\thesection\oldthesection
-}
 
 % Rename the table of contents label
 \renewcommand*\contentsname{\vspace{-1em}}
