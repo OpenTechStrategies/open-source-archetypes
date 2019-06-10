@@ -73,11 +73,12 @@ repository, with the support and participation of Mozilla.  Mozilla
 reviews drafts, but does not exercise editorial control over this
 repository.
 
-Mozilla publishes a graphically enhanced
-[PDF version](https://opentechstrategies.com/files/pub/MZ+OTS_OS_Archetypes_report_ext_scr.pdf) 
-of this document for public distribution (see
+Mozilla published a graphically enhanced
+[PDF version](https://opentechstrategies.com/files/pub/MZ+OTS_OS_Archetypes_report_ext_scr.pdf)
+of the release of document for public distribution (see
 [Patrick Finch's post announcing it](https://medium.com/mozilla-open-innovation/whats-your-open-source-strategy-here-are-10-answers-383221b3f9d3)).
-This LaTeX is the source for that PDF's content, and is the master
-text for purposes of ongoing maintenance.  When version 2 comes out,
-it will likely be similarly graphically enhanced, but in the meantime
-anyone can build intermediate working PDFs from this repository.
+Earlier revisions of this LaTeX were the source for that PDF's
+content, and can be found in this repo's history.  The current
+repository is the master text for purposes of ongoing maintenance.
+While we are working on it, anyone can build intermediate working PDFs
+from this repository.
