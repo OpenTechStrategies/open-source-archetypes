@@ -43,19 +43,6 @@
 % See https://www.ctan.org/pkg/footmisc?lang=en
 \usepackage[hang,flushmargin]{footmisc}
 
-\usepackage{ifxetex,ifluatex}
-\ifxetex
-  \usepackage{fontspec,xltxtra,xunicode}
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-\else
-  \ifluatex
-    \usepackage{fontspec}
-    \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-  \else
-    \usepackage[utf8]{inputenc}
-  \fi
-\fi
-
 % This TOC depth causes the table of contents to provide a high-level
 % overview of the document, instead of distracting the reader with
 % subsection titles and such.
