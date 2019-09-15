@@ -1,0 +1,206 @@
+\unnumberedsection{Archetypes At A Glance}\label{archetypes-at-a-glance}
+
+% We eventually decided not to use these two figures, and their
+% placement in the page was wonky anyway.  But we've left them here
+% commented out in case anyone wants to take a look at them.
+%
+% The source for both images is in images/archetypes-2d-maps.dia.
+%
+% \begin{figure}[h]
+%   \centering
+%   \caption{\emph{Archetypes mapped by inclusiveness and
+%       development speed.}}
+%   \vspace{.5em}
+%   \includegraphics[width=0.9\textwidth]{images/fast-slow-archetypes.png}
+% \end{figure}
+% 
+% \begin{figure}[h]
+%   \centering
+%   \caption{\emph{Archetypes mapped by inclusiveness and typical
+%       participant type.  (None sit at the extreme end of
+%       individual participation only because organizational
+%       participation in open source has become so normal.  Even
+%       individuals who have personal motivations still frequently make
+%       many of their contributions as part of their jobs; the map tries
+%       to take this into account.)}}
+%   \vspace{1em}
+%   \includegraphics[width=0.9\textwidth]{images/individual-biz-archetypes.png}
+% \end{figure}
+
+% These settings are just for the page with the table, and will have
+% to be undone at the end of the table.  (The \addtolength idea is
+% from http://timmurphy.org/2009/07/22/adjusting-latex-margins/.)
+\addtolength{\textwidth}{1.8cm}
+\addtolength{\hoffset}{-1.8cm}
+\begin{spacing}{.52}  % Adjust this to set spacing between lines in cell text.
+
+\begin{table}[H]
+  \begin{longtable}{| m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | m{.088\textwidth} | }
+    \hline
+    % I wish we knew how to get rid of the pointless border around the
+    % unused upper left cell (the one with "\cellcolor{plainwhite}"
+    % below).  But we haven't figured out a way to do that yet without
+    % messing up the rest of the chart, so for now, leave it be.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Header row
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \rowcolor{tableheader} \cellcolor{plainwhite}                         \
+    & {\footnotesize Main Benefit}                                        \
+    & {\footnotesize Main Drawback}                                       \
+    & {\footnotesize Situational Considerations}                          \
+    & {\footnotesize Dev Speed}                                           \
+    & {\footnotesize Typical Participants}                                \
+    & {\footnotesize Ease of Onboarding}                                  \
+    & {\footnotesize Community Standards}                                 \
+    & {\footnotesize Typical Governance}                                  \
+    & {\footnotesize Measure of Open Source Success}              \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Subsequent rows
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize B2B}                            \
+    & {\tiny Driving industry adoption of your technology.}               \
+    & {\tiny Little or no collaborative development.}                     \
+    & {\tiny Requires major market power to be effective. }               \
+    & {\tiny Fast; pace set by business goals.}                           \
+    & {\tiny Organizational reps.}                                        \
+    & {\tiny Hard.}                                                       \
+    & {\tiny Oriented toward organizations.}                              \
+    & {\tiny Founding org, w/ some partner influence.}                    \
+    & {\tiny Adoption by target partners; successful
+        projects built around core project.}                      \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Multi-Vendor Infra}             \
+    & {\tiny Collaboration with partners; address a set of 
+        shared problems.}                                                 \
+    & {\tiny Sometimes off-putting to individual contributors.}           \
+    & {\tiny Business needs of participants affect community
+        management.}                                                      \ 
+    & {\tiny Usually moderate, but depends on needs of participants.}     \
+    & {\tiny Organizational reps.}                                        \
+    & {\tiny Medium.}                                                     \
+    & {\tiny Welcoming but formal; difficult for individuals.}            \
+    & {\tiny Committee of organizational reps.}                           \
+    & {\tiny Partner org variety \& participation; participant
+        longevity.}                                               \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Rocket Ship to Mars}            \
+    & {\tiny Quick, focused effect in a specific area.}                   \
+    & {\tiny Collaboration only available from those who share a very
+        specific vision.}                                                 \
+    & {\tiny Everything depends on success of original vision.}           \
+    & {\tiny Fast; escape velocity.}                                      \
+    & {\tiny Founding organization.}                                      \
+    & {\tiny Hard.}                                                       \
+    & {\tiny Focused on core group.}                                      \
+    & {\tiny Founder governs with iron fist.}                             \
+    & {\tiny Dev speed; adoption by target users; reaching tech
+        goals.}                                                   \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Single-Maintainer Houseplant}   \
+    & {\tiny Easy to start.}                                              \
+    & {\tiny Developer overburdened.}                                     \
+    & {\tiny Starts by filling a small niche, then grows.}                \
+    & {\tiny Medium - fast.}                                              \
+    & {\tiny Founding dev and one-off contributors.}                      \
+    & {\tiny Varies.}                                                     \
+    & {\tiny Varies.}                                                     \
+    & {\tiny Founder leads.}                                              \
+    & {\tiny Either is stable with single maintainer or eventually
+        transitions to another archetype.}                        \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Controlled Ecosystem}           \
+    & {\tiny Can build a sustainable ecosystem in which founding
+        organization has strong influence.}                               \
+    & {\tiny Compromise needed to avoid forks (esp. commercial).}         \
+    & {\tiny Participants have many motivations (commercial \&
+        non-commercial).}                                                 \
+    & {\tiny Medium.}                                                     \
+    & {\tiny Founder, some external core contributors, many plugin
+        contributors.}                                                    \
+    & {\tiny Medium.}                                                     \
+    & {\tiny Welcoming, with some onboarding structures.}                 \
+    & {\tiny Benevolent dictatorship; tries to avoid forks.}              \
+    & {\tiny Adoption by target users; extension developers 
+        growth.}                                                  \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Wide Open}                      \
+    & {\tiny Large-scale collaboration; community can become
+        self-sustaining.}                                                 \
+    & {\tiny Effort to maintain onboarding paths \& manage all
+        participants.}                                                    \
+    & {\tiny Differing commitment \& engagement levels among
+        participants.}                                                    \
+    & {\tiny Slow - medium; some process overhead.}                       \
+    & {\tiny Open to anyone; participant demographic depends on project.} \
+    & {\tiny Easy.}                                                       \
+    & {\tiny Very welcoming, formalized onboarding systems.}              \
+    & {\tiny Group-based; consensus / democratic.}                        \
+    & {\tiny Contributor growth; contribution efficiency; variety 
+        in where ideas and decisions originate.}                  \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Mass Market}                    \
+    & {\tiny Large user base can make project broadly influential.}       \
+    & {\tiny Huge user base needs filtering for dev community.}           \
+    & {\tiny Contributor base does not accurately represent user base.}   \
+    & {\tiny Slow - medium; swift change destabilizes user base.}         \
+    & {\tiny Organizational reps, redistributor reps; some users who
+        are technical.}                                                   \
+    & {\tiny Easy to medium.}                                             \
+    & {\tiny Fully open; scales via users helping users.}                 \
+    & {\tiny Main organization leads, with outside input.}                \
+    & {\tiny User awareness that product is FOSS; non-technical 
+        contributor growth; effective filtering of user feedback to
+        devs.}                                                    \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Specialty Library}              \
+    & {\tiny Ensure quality solution to a specific problem; can lead
+        to new partners.}                                                 \
+    & {\tiny High barriers to entry; relatively small developer pool.}    \
+    & {\tiny Standard-setting effects (\foreignphrase{de facto} or
+        official).}                                                       \
+    & {\tiny Gets slower over time, as library stabilizes.}               \
+    & {\tiny Developers with expertise in the relevant field.}            \
+    & {\tiny Depends on technical complexity.}                            \
+    & {\tiny High barrier; contributors need to be experts.}              \
+    & {\tiny Multi-party committer group.}                                \
+    & {\tiny Adoption in intended domain; high quality of contributors
+        and contributed code.}                                    \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Trusted Vendor}                 \
+    & {\tiny Loyalty of downstream consumers helps project stability.}    \
+    & {\tiny Primary org must be careful how it uses its position.}       \
+    & {\tiny Customer needs vs open source project needs.}                \
+    & {\tiny Medium.  Primary vendor momentum vs third-party needs.}      \
+    & {\tiny Customer reps (both paying and non-paying); some one-off
+        contributors.}                                                    \
+    & {\tiny Medium to hard.}                                             \
+    & {\tiny Clear boundaries: users have mainly roadmap input.}          \
+    & {\tiny Main vendor leads.}                                          \
+    & {\tiny Lack of competitive forks; vendor's leadership accepted
+        by community.}                                            \\ \hline
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \cellcolor{rowheaderleft}{\scriptsize Upstream dependency}            \
+    & {\tiny Broad reach across (hence insight into) many dependee
+        projects.}                                                        \
+    & {\tiny Developer base can sometimes be lightly motivated.}          \
+    & {\tiny Usage patterns of downstream consumers.}                     \
+    & {\tiny Medium; may slow down as standard settles.}                  \
+    & {\tiny Downstream devs.}                                            \
+    & {\tiny Depends on technical complexity.}                            \
+    & {\tiny Welcoming; amenable to one-time contributions.}              \
+    & {\tiny Informal, maintainer-led, committer groups.}                 \
+    & {\tiny Multiple competitive uses; participant longevity; bug
+        reports are technical and constructive.}                  \\ \hline
+  \end{longtable}
+\end{table}
+
+% Restore original values as promised.
+\end{spacing}
+
+\newpage
+
+% You have to do these two after the newpage, otherwise the table is
+% still affected, Because LaTeX.
+\addtolength{\textwidth}{-1.8cm}
+\addtolength{\hoffset}{1.8cm}
+
