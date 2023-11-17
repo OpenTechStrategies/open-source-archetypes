@@ -1,3 +1,16 @@
+# Open Source Archetypes: A Framework For Purposeful Open Source
+
+Note: The home page for this report is
+[opentechstrategies.com/archetypes](https://opentechstrategies.com/archetypes),
+and there is a [PDF available
+there](https://opentechstrategies.com/archetypes-files/open-source-archetypes-v2.pdf).
+This repository is only useful if you want to look at the editing
+history of the report, or to suggest a change, report a bug, etc.
+
+This report is currently on version 2.
+
+# Overview
+
 "Open source" is a broad term that encompasses many different types of
 projects.  There is a wide range of open source approaches, and
 sometimes it helps to think through how your open source approach
@@ -11,8 +24,8 @@ that take account of important differences between various types of
 open source project.
 
 This report is a first step in providing that common vocabulary.  OTS
-prepared the first edition for Mozilla in the first half of 2018; we
-are currently working on a second edition with Mozilla.  The report
+prepared the first edition for Mozilla in the first half of 2018, and
+the second edition in November 2019.  The report
 catalogs a number of open source archetypes we have observed through
 watching many projects over a couple of decades.  We have found these
 archetypes to be a useful resource when crafting strategy, weighing
@@ -32,53 +45,27 @@ multiple archetypes at once, and we had heated discussions on how to
 characterize some projects.  Many successful projects change
 archetypes over their lifecycle.
 
-# How to Contribute
-
-This report is version 1, with version 2 currently under development.
-We have been collecting notes for an update, and we welcome input.  We
-know many people will read this and have views worth adding to the
-conversation; please share those views with us.
-
-There are two main ways to contribute to this report. First, there are
-the usual mechanisms available through GitHub.  Please file issues,
-send pull requests, and review pending contributions.  The same
-distributed collaboration mechanisms we use to build software can be
-used to edit a text document.  The second way to contribute is to send
-us feedback and suggestions via email to `archetypes {_AT_}
-opentechstrategies.com`.  That email will influence our thinking but
-won't make it into the public discussion unless it results in us
-filing a ticket or making a change to the document on GitHub.
-
 # How to Build the PDF
 
 This report is written in
 [LaTeX](https://en.wikipedia.org/wiki/LaTeX), and uses the [OTS
-Doctools](https://github.com/OpenTechStrategies/ots-doctools) system
+Doctools](https://code.librehq.com/ots/ots-doctools) system
 to generate the PDF output.  Once you have the `ots-doctools`
 infrastructure installed properly, running `make` should just work, if
 you're on a Unix-like system that has GNU Make.  We don't have
-experience building this on Windows, but if you do, please let us know
+experience building this document on Windows, but if you do, please let us know
 how it goes and how we can improve these instructions.
 
-# License, Copyright, Publication, and Maintenance
+# License, Copyright, and Publication
 
 This document was originally authored by Karl Fogel, James Vasile, and
 Cecilia Donnelly of Open Tech Strategies as a work-for-hire under
-contract to Mozilla Corporation.  It is Copyright 2018 Mozilla
-Foundation and Open Tech Strategies and licensed to you under
-[CC-BY-SA](LICENSE).  To provide attribution, please link to this repository.
+contract to Mozilla Corporation.  It is copyrighted by the Mozilla
+Foundation and Open Tech Strategies, and licensed to you under
+[CC-BY-SA](LICENSE).  To provide attribution, please link to
+[opentechstrategies.com/archetypes](https://opentechstrategies.com/archetypes).
 
-Open Tech Strategies performs ongoing maintenance of this document and
-repository, with the support and participation of Mozilla.  Mozilla
-reviews drafts, but does not exercise editorial control over this
-repository.
-
-Mozilla published a graphically enhanced
-[PDF version](https://opentechstrategies.com/files/pub/MZ+OTS_OS_Archetypes_report_ext_scr.pdf)
-of the release of document for public distribution (see
-[Patrick Finch's post announcing it](https://medium.com/mozilla-open-innovation/whats-your-open-source-strategy-here-are-10-answers-383221b3f9d3)).
-Earlier revisions of this LaTeX were the source for that PDF's
-content, and can be found in this repo's history.  The current
-repository is the master text for purposes of ongoing maintenance.
-While we are working on it, anyone can build intermediate working PDFs
-from this repository.
+Mozilla reviewed drafts and provided a great deal of helpful
+commentary, but exercised no editorial control over content.  Open
+Tech Strategies is solely responsible for the content of the report,
+including any errors.
